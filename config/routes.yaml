@@ -1,0 +1,15 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+homepage:
+  path: /
+  controller: App\Controller\BeController::index
+
+document_verif:
+  path: /verif
+  controller: App\Controller\BeController::verif
+
+document_param:
+  path: /param
+  controller: App\Controller\BeController::param

@@ -1,0 +1,153 @@
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+    <div class="container">
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s8 m8 l8"></div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.version) }}
+                {{ form_label(form.version, 'Version du document') }}
+            </div>
+        </div>
+        <p class="title">Page de garde</p>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pgLiDebInfos) }}
+                {{ form_label(form.pgLiDebInfos, 'Ligne début des informations') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pgLiFinInfos) }}
+                {{ form_label(form.pgLiFinInfos, 'Ligne fin des informations') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pgColInfos) }}
+                {{ form_label(form.pgColInfos, 'Colonne des informations') }}
+            </div>
+        </div>
+
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s4 m l4">
+                {{ form_widget(form.pgColLab) }}
+                {{ form_label(form.pgColLab, 'Colonne labels des données') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pgColLabId) }}
+                {{ form_label(form.pgColLabId, 'Colonne label identifiants PMZ & PA') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pgColLabNb) }}
+                {{ form_label(form.pgColLabNb, 'Colonne label nombre de µmodules [...] PMZ-PA') }}
+            </div>
+        </div>
+
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pgColPaGeo) }}
+                {{ form_label(form.pgColPaGeo, 'Colonne donnée réseau PMZ & PA géofibre') }}
+            </div>
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pgColPaId) }}
+                {{ form_label(form.pgColPaId, 'Colonne donnée réseau PMZ & PA identifiant') }}
+            </div>
+        </div>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pgLiPmz) }}
+                {{ form_label(form.pgLiPmz, 'Ligne données réseau PMZ') }}
+            </div>
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pgLiPa) }}
+                {{ form_label(form.pgLiPa, 'Ligne données réseau PA') }}
+            </div>
+        </div>
+
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pgColNbPmz) }}
+                {{ form_label(form.pgColNbPmz, 'Colonne donnée nombre de µmodules [...] PMZ-PA') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pgColNbPa) }}
+                {{ form_label(form.pgColNbPa, 'Colonne donnée nombre de µmodules [...] PA') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pgLiNb) }}
+                {{ form_label(form.pgLiNb, 'Ligne données positionnement étude') }}
+            </div>
+        </div>
+        <p class="title">Pointage étude</p>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.peColElr) }}
+                {{ form_label(form.peColElr, 'Colonne El R') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.peColElp) }}
+                {{ form_label(form.peColElp, 'Colonne EL P') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.peLiDe) }}
+                {{ form_label(form.peLiDe, 'Ligne début données') }}
+            </div>
+        </div>
+
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.peColNbre) }}
+                {{ form_label(form.peColNbre, 'Colonne Nbre log') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.peColTotal) }}
+                {{ form_label(form.peColTotal, 'Colonne nombre total') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.peColMenu) }}
+                {{ form_label(form.peColMenu, 'Colonne menu déroulant') }}
+            </div>
+        </div>
+        <p class="title">Positionnement étude</p>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pseColId) }}
+                {{ form_label(form.pseColId, 'Colonne Id PB Geofibre') }}
+            </div>
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pseLiDe) }}
+                {{ form_label(form.pseLiDe, 'Ligne début données') }}
+            </div>
+        </div>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pseColNb) }}
+                {{ form_label(form.pseColNb, 'Colonne Nbre_Log') }}
+            </div>
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pseColNbSum) }}
+                {{ form_label(form.pseColNbSum, 'Colonne Nbre_Log à grouper par géofibre') }}
+            </div>
+        </div>
+
+        <p class="title">Synoptique bilan µmodules</p>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.sbLiPmz) }}
+                {{ form_label(form.sbLiPmz, 'Ligne nombre de µmodules [...] PMZ-PA') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.sbLiPa) }}
+                {{ form_label(form.sbLiPa, 'Ligne nombre de µmodules [...] PA') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.sbColNb) }}
+                {{ form_label(form.sbColNb, 'Colonne nombre de µmodules') }}
+            </div>
+        </div>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s10 m10 l10"></div>
+            <div class="input-field col s2 m2 l2">
+                <input type="submit" name="" value="Enregistrer" class="btn btn-primary">
+            </div>
+
+        </div>
+    </div>
+
+
+{{ form_end(form) }}

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BE | Upload Excel{% endblock %}
+
+{% block content %}
+
+    {{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+        <div class="input-file-container">
+            <div class="input-field col s12 m12 l12">
+                {{ form_widget(form.fichier) }}
+                <span class="error">{{ form_errors(form.fichier) }}</span>
+            </div>
+
+            <div class="input-field col s12 m12 l12">
+                <input type="submit" name="" value="Vérifier" class="btn btn-primary-submit">
+            </div>
+        </div>
+
+
+    {{ form_end(form) }}
+
+{% endblock %}
+

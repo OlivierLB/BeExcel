@@ -1,0 +1,116 @@
+/* navbar */
+nav {
+    background-color: #ff6908;
+    margin-bottom: 30px;
+}
+
+.input-file-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+.btn-primary-submit{
+    background-color: #ff6908;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+.input-file-trigger {
+    display: block;
+    padding: 14px 45px;
+    background: #ff6908;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+.input-file {
+    position: absolute;
+    top: 0; left: 0;
+    width: 225px;
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+}
+.input-file:hover + .input-file-trigger,
+.input-file:focus + .input-file-trigger,
+.input-file-trigger:hover,
+.input-file-trigger:focus {
+    background: #28282e;
+    color: #ff6908;
+}
+
+.input-field{
+    color: #ff6908;
+}
+
+.file-return {
+    margin: 0;
+}
+.file-return:not(:empty) {
+    margin: 1em 0;
+}
+.file-return {
+    font-style: italic;
+    font-size: .9em;
+    font-weight: bold;
+}
+.file-return:not(:empty):before {
+    content: "Fichier sélectionné : ";
+    font-style: normal;
+    font-weight: normal;
+}
+
+.resultErreur{
+    color: red;
+    text-align: center;
+}
+.resultErreur span{
+    vertical-align: top;
+    font-size: large;
+}
+
+.resultErreur :hover{
+    cursor: pointer;
+}
+
+.displayError{
+    display: none;
+    text-align: revert;
+}
+
+.resultWork{
+    color: seagreen;
+    text-align: center;
+}
+.resultWork span{
+    vertical-align: top;
+    font-size: large;
+}
+
+.resultWarning{
+    color: #ff6908;
+    text-align: center;
+}
+
+.resultWarning span{
+    vertical-align: top;
+    font-size: large;
+}
+
+.verif{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.title{
+    color: #ff6908;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: "Times New Roman";
+}
