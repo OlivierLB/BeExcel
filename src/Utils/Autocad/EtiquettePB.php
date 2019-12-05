@@ -26,11 +26,13 @@ class EtiquettePB {
         for ($i = 5; $i <= 80; $i++) {
             if($gestionExcel->getCalculatedValue($positionnementEtude, 1, $i)){
                 if($gestionExcel->getCalculatedValue($positionnementEtude,16, $i) !== $gestionExcel->getCalculatedValue($positionnementEtude,16, $i - 1)){
-                    $data['Troncon'] = $gestionExcel->getCalculatedValue($positionnementEtude,22, $i);
+                    $data['troncon'] = $gestionExcel->getCalculatedValue($positionnementEtude,22, $i);
+                    $data['ELR'] = $gestionExcel->getOldCalculatedValue($positionnementEtude,15, $i);
+                    $data['ADR'] = $gestionExcel->getOldCalculatedValue($positionnementEtude,24, $i);
+                    $data['codeCH'] = $gestionExcel->getOldCalculatedValue($positionnementEtude,23, $i);
                 }
                 if($gestionExcel->getCalculatedValue($positionnementEtude,16, $i) !== $gestionExcel->getCalculatedValue($positionnementEtude,16, $i + 1)){
                     $data['PB'] =  substr($gestionExcel->getCalculatedValue($positionnementEtude,16, $i), -5);
-                    $data['ADR'] = $gestionExcel->getCalculatedValue($positionnementEtude,9, $i);
                     $this->newEtiquettePB($x, $y, $dxf, $data);
                     $x += 100;
                 }
@@ -42,10 +44,10 @@ class EtiquettePB {
 
         $dxf->setLayer('texte', Color::WHITE, LineType::SOLID)
             ->addText($x, $y, 0, "PB : " . $data['PB'], 3, 1)
-            ->addText($x + 50, $y, 0, substr($data['Troncon'], 0, 6) . ".", 3, 1)
+            ->addText($x + 50, $y, 0, substr($data['troncon'], 0, 6) . ".", 3, 1)
             ->addText($x, $y - 10, 0, "PT : ", 3, 1)
             ->addText($x, $y - 15, 0, "PF : ", 3, 1)
-            ->addText($x, $y - 20, 0, "Code ch. IPON :  ", 3, 1)
+            ->addText($x, $y - 20, 0, "Code ch. IPON : " . substr($data['codeCH'], 4, -6), 3, 1)
             ->addText($x, $y - 25, 0, "N° type VOIE : ", 3, 1)
             ->addText($x, $y - 30, 0, "ADR : " . $data['ADR'], 3, 1)
             ->addText($x, $y - 35, 0, "ELR : " . $data['ELR'], 3, 1)
@@ -63,7 +65,7 @@ class EtiquettePB {
             ->addLine($x + 63, $y -47, 0, $x + 63, $y - 60, 0)
             ->addLine($x, $y -60, 0, $x + 63, $y - 60, 0)
             ->saveToFile('demo.dxf');
-
+        
         $this->newDerivationPB($x, $y, $dxf, $data);
     }
 
