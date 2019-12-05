@@ -1,4 +1,7 @@
 {
+    "adamasantares/dxf": {
+        "version": "0.1.5"
+    },
     "api-platform/api-pack": {
         "version": "v1.2.1"
     },

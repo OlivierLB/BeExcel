@@ -4,8 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28e6651b90ab63c87bbb1d3a4035c168",
+    "content-hash": "1b3aa8e5cce48b8d3acbe1d15aceb1f7",
     "packages": [
+        {
+            "name": "adamasantares/dxf",
+            "version": "0.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/active-programming/DXF-Creator-for-PHP.git",
+                "reference": "643a2cdb56fbc946fbc0ce273e1751f8c326a5b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/active-programming/DXF-Creator-for-PHP/zipball/643a2cdb56fbc946fbc0ce273e1751f8c326a5b9",
+                "reference": "643a2cdb56fbc946fbc0ce273e1751f8c326a5b9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "adamasantares\\dxf\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Konstantin Kutsevalov",
+                    "email": "konstantin@kutsevalov.name"
+                }
+            ],
+            "description": "A simple DXF creator for PHP",
+            "homepage": "https://github.com/active-programming/DXF-Creator-for-PHP#readme",
+            "keywords": [
+                "dxf",
+                "php"
+            ],
+            "time": "2019-11-14T06:26:30+00:00"
+        },
         {
             "name": "api-platform/api-pack",
             "version": "v1.2.1",

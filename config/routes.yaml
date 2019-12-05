@@ -13,3 +13,7 @@ document_verif:
 document_param:
   path: /param
   controller: App\Controller\BeController::param
+
+autocad_import:
+  path: /test
+  controller: App\Controller\AutocadController::import
