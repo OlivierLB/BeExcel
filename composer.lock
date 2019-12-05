@@ -4,49 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b3aa8e5cce48b8d3acbe1d15aceb1f7",
+    "content-hash": "bb1fb1d08c33c8a914bb95c8d8b9b9ae",
     "packages": [
-        {
-            "name": "adamasantares/dxf",
-            "version": "0.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/active-programming/DXF-Creator-for-PHP.git",
-                "reference": "643a2cdb56fbc946fbc0ce273e1751f8c326a5b9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/active-programming/DXF-Creator-for-PHP/zipball/643a2cdb56fbc946fbc0ce273e1751f8c326a5b9",
-                "reference": "643a2cdb56fbc946fbc0ce273e1751f8c326a5b9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "adamasantares\\dxf\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kutsevalov",
-                    "email": "konstantin@kutsevalov.name"
-                }
-            ],
-            "description": "A simple DXF creator for PHP",
-            "homepage": "https://github.com/active-programming/DXF-Creator-for-PHP#readme",
-            "keywords": [
-                "dxf",
-                "php"
-            ],
-            "time": "2019-11-14T06:26:30+00:00"
-        },
         {
             "name": "api-platform/api-pack",
             "version": "v1.2.1",
@@ -2086,6 +2045,46 @@
                 "service proxies"
             ],
             "time": "2019-08-10T08:37:15+00:00"
+        },
+        {
+            "name": "olivierlb/phpdxf",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OlivierLB/PhpCreatorDXF_TimesNewRoman.git",
+                "reference": "447acf94012cae6b0097667e18a79f3bb6ffdbd2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OlivierLB/PhpCreatorDXF_TimesNewRoman/zipball/447acf94012cae6b0097667e18a79f3bb6ffdbd2",
+                "reference": "447acf94012cae6b0097667e18a79f3bb6ffdbd2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "olivierlb\\phpdxf\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "OlivierLB",
+                    "email": "lebloas.olivier@gmail.com"
+                }
+            ],
+            "homepage": "https://github.com/OlivierLB/PhpCreatorDXF_TimesNewRoman/blob/master/README.md",
+            "keywords": [
+                "dxf",
+                "php"
+            ],
+            "time": "2019-12-05T15:45:02+00:00"
         },
         {
             "name": "pagerfanta/pagerfanta",

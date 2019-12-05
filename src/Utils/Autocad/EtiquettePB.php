@@ -8,9 +8,10 @@
 
 namespace App\Utils\Autocad;
 
-use adamasantares\dxf\Color;
-use adamasantares\dxf\LineType;
+
 use App\Utils\GestionExcel;
+use olivierlb\phpdxf\Color;
+use olivierlb\phpdxf\LineType;
 
 
 class EtiquettePB {
@@ -47,7 +48,7 @@ class EtiquettePB {
             ->addText($x, $y - 20, 0, "Code ch. IPON :  ", 3, 1)
             ->addText($x, $y - 25, 0, "N° type VOIE : ", 3, 1)
             ->addText($x, $y - 30, 0, "ADR : " . $data['ADR'], 3, 1)
-            ->addText($x, $y - 35, 0, "ELR : ", 3, 1)
+            ->addText($x, $y - 35, 0, "ELR : " . $data['ELR'], 3, 1)
             ->setLayer('contour', Color::BLUE, LineType::SOLID)
             ->addLine($x - 5, $y - 7, 0, $x + 70, $y - 7, 0)
             ->addLine($x - 5, $y + 3, 0, $x + 70, $y + 3, 0)

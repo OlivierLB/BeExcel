@@ -159,6 +159,9 @@
     "ocramius/proxy-manager": {
         "version": "2.2.3"
     },
+    "olivierlb/phpdxf": {
+        "version": "dev-master"
+    },
     "pagerfanta/pagerfanta": {
         "version": "v2.1.3"
     },
