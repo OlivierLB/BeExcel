@@ -15,5 +15,5 @@ document_param:
   controller: App\Controller\BeController::param
 
 autocad_import:
-  path: /test
+  path: /createSynoptique
   controller: App\Controller\AutocadController::import

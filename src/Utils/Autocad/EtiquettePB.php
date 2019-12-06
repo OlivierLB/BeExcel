@@ -43,41 +43,41 @@ class EtiquettePB {
     private function newEtiquettePB($x, $y, $dxf, $data){
 
         $dxf->setLayer('texte', Color::WHITE, LineType::SOLID)
-            ->addText($x, $y, 0, "PB : " . $data['PB'], 3, 1)
-            ->addText($x + 50, $y, 0, substr($data['troncon'], 0, 6) . ".", 3, 1)
-            ->addText($x, $y - 10, 0, "PT : ", 3, 1)
-            ->addText($x, $y - 15, 0, "PF : ", 3, 1)
-            ->addText($x, $y - 20, 0, "Code ch. IPON : " . substr($data['codeCH'], 4, -6), 3, 1)
-            ->addText($x, $y - 25, 0, "N° type VOIE : ", 3, 1)
-            ->addText($x, $y - 30, 0, "ADR : " . $data['ADR'], 3, 1)
-            ->addText($x, $y - 35, 0, "ELR : " . $data['ELR'], 3, 1)
+            ->addText($x, $y, 0, "PB : " . $data['PB'], 1.875, 1)
+            ->addText($x + 30, $y, 0, substr($data['troncon'], 0, 6) . ".", 1.875, 1)
+            ->addText($x, $y - 4, 0, "PT : ", 1.875, 1)
+            ->addText($x, $y - 7, 0, "PF : ", 1.875, 1)
+            ->addText($x, $y - 10, 0, "Code ch. IPON : " . substr($data['codeCH'], 4, -6), 1.875, 1)
+            ->addText($x, $y - 13, 0, "N° type VOIE : ", 1.875, 1)
+            ->addText($x, $y - 16, 0, "ADR : " . $data['ADR'], 1.875, 1)
+            ->addText($x, $y - 19, 0, "ELR : " . $data['ELR'], 1.875, 1)
             ->setLayer('contour', Color::BLUE, LineType::SOLID)
-            ->addLine($x - 5, $y - 7, 0, $x + 70, $y - 7, 0)
-            ->addLine($x - 5, $y + 3, 0, $x + 70, $y + 3, 0)
-            ->addLine($x - 5, $y - 40, 0, $x + 70, $y - 40, 0)
-            ->addLine($x - 5, $y + 3, 0, $x -5, $y - 40, 0)
-            ->addLine($x + 70, $y + 3, 0, $x + 70, $y - 40, 0)
-            ->addLine($x + 48, $y + 3, 0, $x + 48, $y - 7, 0)
+            ->addLine($x - 1, $y - 2.5, 0, $x + 40, $y - 2.5, 0)
+            ->addLine($x - 1, $y + 1, 0, $x + 40, $y + 1, 0)
+            ->addLine($x - 1, $y - 22, 0, $x + 40, $y - 22, 0)
+            ->addLine($x - 1, $y + 1, 0, $x -1, $y - 22, 0)
+            ->addLine($x + 40, $y + 1, 0, $x + 40, $y - 22, 0)
+            ->addLine($x + 29, $y + 1, 0, $x + 29, $y - 2.5, 0)
             ->setLayer('texte')
-            ->addText($x + 3, $y - 50, 0, "PB " . $data['PB'], 8, 1)
-            ->addLine($x, $y -47, 0, $x + 63, $y - 47, 0)
-            ->addLine($x, $y -47, 0, $x, $y - 60, 0)
-            ->addLine($x + 63, $y -47, 0, $x + 63, $y - 60, 0)
-            ->addLine($x, $y -60, 0, $x + 63, $y - 60, 0)
+            ->addText($x + 7, $y - 25, 0, "PB " . $data['PB'], 4.5, 1)
+            ->addLine($x + 6.5, $y - 24.5, 0, $x + 33, $y - 24.5, 0)
+            ->addLine($x + 6.5, $y - 24.5, 0, $x + 6.5, $y - 30, 0)
+            ->addLine($x + 33, $y - 24.5, 0, $x + 33, $y - 30, 0)
+            ->addLine($x + 6.5, $y - 30, 0, $x + 33, $y - 30, 0)
             ->saveToFile('demo.dxf');
-        
+
         $this->newDerivationPB($x, $y, $dxf, $data);
     }
 
     private function newDerivationPB($x, $y, $dxf, $data){
 
         $dxf->setLayer('texte')
-            ->addText($x, $y - 70, 0, "Fo 01 à Fo 12 -> 01 à 12 ", 2, 1)
+            ->addText($x, $y - 33, 0, "Fo 01 à Fo 12 -> 01 à 12 ", 1.875, 1)
             ->setLayer('contour')
-            ->addLine($x - 5, $y -67, 0, $x + 70, $y - 67, 0)
-            ->addLine($x - 5, $y -75, 0, $x + 70, $y - 75, 0)
-            ->addLine($x - 5, $y -67, 0, $x - 5, $y - 75, 0)
-            ->addLine($x + 70, $y -67, 0, $x + 70, $y - 75, 0)
+            ->addLine($x - 1, $y - 32.5, 0, $x + 40, $y -  32.5, 0)
+            ->addLine($x - 1, $y - 35.5, 0, $x + 40, $y -  35.5, 0)
+            ->addLine($x - 1, $y - 35.5, 0, $x - 1, $y - 32.5, 0)
+            ->addLine($x + 40, $y - 35.5, 0, $x + 40, $y - 32.5, 0)
             ->saveToFile('demo.dxf');
     }
 

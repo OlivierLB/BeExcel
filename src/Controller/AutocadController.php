@@ -12,6 +12,8 @@ namespace App\Controller;
 use App\Utils\Autocad\EtiquettePB;
 
 
+use App\Utils\Autocad\Pmz;
+use App\Utils\Autocad\SynoptiqueGlobal;
 use olivierlb\phpdxf\Creator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
@@ -29,13 +31,15 @@ class AutocadController extends AbstractController {
     }
 
     /**
-     * @Route("/test", name="verif")
+     * @Route("/createSynoptique", name="verif")
      * @throws
      */
     public function import(){
 
         $dxf = new Creator(Creator::MILLIMETERS);
         $etiquettePB = new EtiquettePB();
+        $pmz = new Pmz();
+        $global = new SynoptiqueGlobal();
 
         //Récupération de l'url du fichier
         $url = $this->parameterBag->get('kernel.project_dir'). '/public/uploads/toCheck.xlsx';
@@ -45,6 +49,10 @@ class AutocadController extends AbstractController {
         try{
             $spreadsheet = $reader->load($url);
             $etiquettePB->listPB($dxf, $spreadsheet);
+            $pmz->addPmz($dxf);
+            $global->addContour($dxf);
+
+
         }catch (FileException $e){
             return new Response($e->getMessage());
         }
