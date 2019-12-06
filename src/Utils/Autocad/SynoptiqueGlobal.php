@@ -20,6 +20,6 @@ class SynoptiqueGlobal {
             ->addLine($x, $y, 0, $x, $y - 556.7128, 0)
             ->addLine($x + 793.1579, $y, 0, $x + 793.1579, $y - 556.7128, 0)
             ->addLine($x, $y - 556.7128, 0, $x + 793.1579, $y - 556.7128, 0)
-            ->saveToFile('demo.dxf');
+            ->saveToFile('synoptiqueGenere.dxf');
     }
 }

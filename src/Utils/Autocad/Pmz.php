@@ -9,12 +9,16 @@
 namespace App\Utils\Autocad;
 
 
+use olivierlb\phpdxf\Color;
+use olivierlb\phpdxf\LineType;
+
 class Pmz {
 
     public function addPmz($dxf){
-        $x = -100;
-        $y = 0;
+        $x = -193;
+        $y = -40;
 
+        $this->addContour($x, $y, $dxf);
         for($i = 1; $i <= 4; $i++){
             $this->addTete($x, $y, $i, $dxf);
             $y -= 53;
@@ -35,7 +39,17 @@ class Pmz {
             ->addLine($x + 40, $y - 21, 0, $x + 45, $y - 21, 0)
             ->addLine($x + 40, $y - 36, 0, $x + 45, $y - 36, 0)
             ->addLine($x + 40, $y - 51, 0, $x + 45, $y - 51, 0)
-            ->saveToFile("demo.dxf");
+            ->saveToFile("synoptiqueGenere.dxf");
+    }
+
+    private function addContour($x, $y, $dxf){
+
+        $dxf->setLayer('pmz', Color::MAGENTA, LineType::SOLID)
+            ->addLine($x - 3, $y + 3, 0, $x + 47, $y + 3, 0)
+            ->addLine($x - 3, $y - 214, 0, $x + 47, $y - 214, 0)
+            ->addLine($x - 3, $y + 3, 0, $x - 3, $y - 214, 0)
+            ->addLine($x + 47, $y + 3, 0, $x + 47, $y - 214, 0)
+            ->saveToFile("synoptiqueGenere.dxf");
     }
 
 }

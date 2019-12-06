@@ -17,8 +17,8 @@ use olivierlb\phpdxf\LineType;
 class EtiquettePB {
 
     public function listPB($dxf, $spreadsheet){
-        $x = 0;
-        $y = 0;
+        $x = -150;
+        $y = 100;
 
         $positionnementEtude = $spreadsheet->getSheetByName('positionnement-etude');
         $gestionExcel = new GestionExcel();
@@ -34,7 +34,7 @@ class EtiquettePB {
                 if($gestionExcel->getCalculatedValue($positionnementEtude,16, $i) !== $gestionExcel->getCalculatedValue($positionnementEtude,16, $i + 1)){
                     $data['PB'] =  substr($gestionExcel->getCalculatedValue($positionnementEtude,16, $i), -5);
                     $this->newEtiquettePB($x, $y, $dxf, $data);
-                    $x += 100;
+                    $x += 60;
                 }
             }
         }
@@ -64,7 +64,7 @@ class EtiquettePB {
             ->addLine($x + 6.5, $y - 24.5, 0, $x + 6.5, $y - 30, 0)
             ->addLine($x + 33, $y - 24.5, 0, $x + 33, $y - 30, 0)
             ->addLine($x + 6.5, $y - 30, 0, $x + 33, $y - 30, 0)
-            ->saveToFile('demo.dxf');
+            ->saveToFile('synoptiqueGenere.dxf');
 
         $this->newDerivationPB($x, $y, $dxf, $data);
     }
@@ -78,7 +78,7 @@ class EtiquettePB {
             ->addLine($x - 1, $y - 35.5, 0, $x + 40, $y -  35.5, 0)
             ->addLine($x - 1, $y - 35.5, 0, $x - 1, $y - 32.5, 0)
             ->addLine($x + 40, $y - 35.5, 0, $x + 40, $y - 32.5, 0)
-            ->saveToFile('demo.dxf');
+            ->saveToFile('synoptiqueGenere.dxf');
     }
 
 
