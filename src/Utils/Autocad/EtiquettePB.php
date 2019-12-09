@@ -52,18 +52,27 @@ class EtiquettePB {
             ->addText($x, $y - 16, 0, "ADR : " . $data['ADR'], 1.875, 1)
             ->addText($x, $y - 19, 0, "ELR : " . $data['ELR'], 1.875, 1)
             ->setLayer('contour', Color::BLUE, LineType::SOLID)
-            ->addLine($x - 1, $y - 2.5, 0, $x + 40, $y - 2.5, 0)
-            ->addLine($x - 1, $y + 1, 0, $x + 40, $y + 1, 0)
-            ->addLine($x - 1, $y - 22, 0, $x + 40, $y - 22, 0)
-            ->addLine($x - 1, $y + 1, 0, $x -1, $y - 22, 0)
-            ->addLine($x + 40, $y + 1, 0, $x + 40, $y - 22, 0)
-            ->addLine($x + 29, $y + 1, 0, $x + 29, $y - 2.5, 0)
+            ->addPolyline([
+                $x + 29, $y + 1,
+                $x + 40, $y + 1,
+                $x + 40, $y - 22,
+                $x - 1, $y - 22,
+                $x - 1, $y + 1,
+                $x + 29, $y + 1], 0, 0.30)
+            ->addPolyline([
+                $x + 29, $y + 1,
+                $x + 29, $y - 2.5,
+                $x + 29, $y + 1], 0, 0.3)
+            ->addPolyline([
+                $x - 1, $y - 2.5,
+                $x + 40, $y - 2.5,
+                $x - 1, $y - 2.5], 0, 0.3)
             ->setLayer('texte')
             ->addText($x + 7, $y - 25, 0, "PB " . $data['PB'], 4.5, 1)
-            ->addLine($x + 6.5, $y - 24.5, 0, $x + 33, $y - 24.5, 0)
+            ->addLine($x + 6.5, $y - 24.5, 0, $x + 34, $y - 24.5, 0)
             ->addLine($x + 6.5, $y - 24.5, 0, $x + 6.5, $y - 30, 0)
-            ->addLine($x + 33, $y - 24.5, 0, $x + 33, $y - 30, 0)
-            ->addLine($x + 6.5, $y - 30, 0, $x + 33, $y - 30, 0)
+            ->addLine($x + 34, $y - 24.5, 0, $x + 34, $y - 30, 0)
+            ->addLine($x + 6.5, $y - 30, 0, $x + 34, $y - 30, 0)
             ->saveToFile('synoptiqueGenere.dxf');
 
         $this->newDerivationPB($x, $y, $dxf, $data);
@@ -74,10 +83,14 @@ class EtiquettePB {
         $dxf->setLayer('texte')
             ->addText($x, $y - 33, 0, "Fo 01 à Fo 12 -> 01 à 12 ", 1.875, 1)
             ->setLayer('contour')
-            ->addLine($x - 1, $y - 32.5, 0, $x + 40, $y -  32.5, 0)
-            ->addLine($x - 1, $y - 35.5, 0, $x + 40, $y -  35.5, 0)
-            ->addLine($x - 1, $y - 35.5, 0, $x - 1, $y - 32.5, 0)
-            ->addLine($x + 40, $y - 35.5, 0, $x + 40, $y - 32.5, 0)
+            ->addPolyline([
+                $x, $y - 32.5,
+                $x + 40, $y -  32.5,
+                $x + 40, $y - 35.5,
+                $x - 1, $y - 35.5,
+                $x - 1, $y - 32.5,
+                $x, $y - 32.5,
+            ], 0, 0.3)
             ->saveToFile('synoptiqueGenere.dxf');
     }
 
