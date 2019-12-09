@@ -12,6 +12,7 @@ namespace App\Controller;
 use App\Utils\Autocad\EtiquettePB;
 
 
+use App\Utils\Autocad\Pa;
 use App\Utils\Autocad\Pmz;
 use App\Utils\Autocad\SynoptiqueGlobal;
 use olivierlb\phpdxf\Creator;
@@ -40,6 +41,7 @@ class AutocadController extends AbstractController {
         $etiquettePB = new EtiquettePB();
         $pmz = new Pmz();
         $global = new SynoptiqueGlobal();
+        $pa = new Pa();
 
         //Récupération de l'url du fichier
         $url = $this->parameterBag->get('kernel.project_dir'). '/public/uploads/toCheck.xlsx';
@@ -49,8 +51,9 @@ class AutocadController extends AbstractController {
         try{
             $spreadsheet = $reader->load($url);
             $etiquettePB->listPB($dxf, $spreadsheet);
-            $pmz->addPmz($dxf);
-            $global->addContour($dxf);
+            $pmz->addPmz($dxf, $spreadsheet);
+            $global->setGlobal($dxf);
+            $pa->addPa($dxf, $spreadsheet);
 
 
         }catch (FileException $e){

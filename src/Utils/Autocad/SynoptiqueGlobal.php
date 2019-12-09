@@ -11,9 +11,13 @@ namespace App\Utils\Autocad;
 
 class SynoptiqueGlobal {
 
-    public function addContour($dxf){
+    public function setGlobal($dxf){
+        $this->addContour($dxf);
+    }
+
+    private function addContour($dxf){
         $x = -200;
-        $y = +50;
+        $y = 50;
 
         $dxf->setLayer('texte')
             ->addLine($x, $y, 0, $x + 793.1579, $y, 0)
