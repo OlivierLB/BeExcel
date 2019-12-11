@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2146f6a732ba9d911af5af6a71a1f802",
+    "content-hash": "5a49a62ea05db1bc856f075353debdd7",
     "packages": [
         {
             "name": "api-platform/api-pack",
@@ -2048,16 +2048,16 @@
         },
         {
             "name": "olivierlb/phpdxf",
-            "version": "v1.1.0",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/OlivierLB/PhpCreatorDXF_TimesNewRoman.git",
-                "reference": "ffe6f74ba2e58a4c001e3ec052709b27735ac908"
+                "reference": "a9f9b75a19009c34ca810915ce6cb51b43cfc26f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OlivierLB/PhpCreatorDXF_TimesNewRoman/zipball/ffe6f74ba2e58a4c001e3ec052709b27735ac908",
-                "reference": "ffe6f74ba2e58a4c001e3ec052709b27735ac908",
+                "url": "https://api.github.com/repos/OlivierLB/PhpCreatorDXF_TimesNewRoman/zipball/a9f9b75a19009c34ca810915ce6cb51b43cfc26f",
+                "reference": "a9f9b75a19009c34ca810915ce6cb51b43cfc26f",
                 "shasum": ""
             },
             "require": {
@@ -2084,7 +2084,7 @@
                 "dxf",
                 "php"
             ],
-            "time": "2019-12-09T08:30:33+00:00"
+            "time": "2019-12-11T08:21:20+00:00"
         },
         {
             "name": "pagerfanta/pagerfanta",
