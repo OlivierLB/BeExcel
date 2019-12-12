@@ -34,6 +34,27 @@ class SynoptiqueGlobal {
     private function addLegende($dxf){
         $this->addModules($dxf);
         $this->addPmzToPa($dxf);
+        $this->addLignes($dxf);
+    }
+
+    private function addLignes($dxf){
+        $x = -600;
+        $y = -400;
+
+        $dxf->setLayer('texte')
+            ->addLine($x, $y, 0, $x + 300, $y, 0)
+            ->saveToFile('synoptiqueGenere.dxf');
+
+        for($i = $x; $i <= $x + 295; $i = $i + 15){
+            $dxf->setLayer('texte')
+                ->addPolyline([
+                    $i + 5, $y,
+                    $i + 4, $y + 2,
+                    $i + 5, $y,
+                    $i + 6, $y + 2,
+                    $i + 5, $y
+                ], 0, 0);
+        }
     }
 
     private function addPmzToPa($dxf) {
@@ -56,12 +77,9 @@ class SynoptiqueGlobal {
                 $x + 47, $y + 31,
                 $x + 83, $y + 31,
                 $x + 83, $y + 20,
-                $x + 84.64, $y + 5,
-                $x + 83, $y + 20,
                 $x + 47, $y + 20,
                 $x + 47, $y + 31
             ], 0, 0, 0.5)
-
             ->saveToFile('synoptiqueGenere.dxf');
     }
 
@@ -190,7 +208,6 @@ class SynoptiqueGlobal {
             ])
             ->addEllipse($x + 84.64, $y - 110, 0, $x + 84.64, $y - 215, 0, 0.03)
             ->saveToFile('synoptiqueGenere.dxf');
-
     }
 
     private function addModules($dxf){

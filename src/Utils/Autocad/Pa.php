@@ -41,6 +41,19 @@ class Pa {
             ->addText($x + 0.5, $y - 21.25, 0, "TYPE PEO : ", 1.875, 1)
             ->addText($x + 0.5, $y - 24.5, 0, "SORTIES : ", 1.875, 1)
             ->addText($x + 0.5, $y - 27.75, 0, "NB µmodules : ", 1.875, 1)
+            ->addText($x   + 5, $y - 45, 0, "Jonction", 4.125, 1)
+            ->addPolyline([
+                $x - 5, $y - 50,
+                $x + 39, $y - 50,
+                $x + 39, $y - 280,
+                $x - 5, $y - 280,
+                $x - 5, $y - 50
+            ])
+            ->setLayer('delim')
+            ->addPolyline([
+                $x + 17, $y - 50,
+                $x + 17, $y - 280
+            ], 0, 0, 0.1)
             ->saveToFile('synoptiqueGenere.dxf');
     }
 }
