@@ -9,6 +9,7 @@
 namespace App\Utils\Autocad;
 
 
+use App\Utils\GestionExcel;
 use olivierlb\phpdxf\Color;
 use olivierlb\phpdxf\LineType;
 
@@ -57,6 +58,9 @@ class Pmz {
         $x = -184.16;
         $y = -10.63;
 
+        $pageDeGarde = $spreadsheet->getSheetByName('page_de_garde');
+        $gestionExcel = new GestionExcel();
+
         $dxf->setLayer('rouge', Color::RED, LineType::SOLID)
             ->addPolyline([
                 $x + 1, $y,
@@ -72,7 +76,7 @@ class Pmz {
                 $x, $y - 3.34
             ], 0, 0.3)
             ->setLayer('texte')
-            ->addText($x + 0.5, $y - 0.75, 0, "PMZ : ", 1.875, 1)
+            ->addText($x + 0.5, $y - 0.75, 0, "PMZ : " . substr($gestionExcel->getCalculatedValue($pageDeGarde, 11, 12), -5), 1.875, 1)
             ->addText($x + 0.5, $y - 4.5, 0, "PT : ", 1.875, 1)
             ->addText($x + 0.5, $y - 8.25, 0, "PF : ", 1.875, 1)
             ->addText($x + 0.5, $y - 11.5, 0, "Code ch. IPON : ", 1.875, 1)

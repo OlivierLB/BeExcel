@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="">
+    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Fin schéma">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AutocadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AutocadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Autocad/EtiquettePB.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Autocad/EtiquettePB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Autocad/SynoptiqueGlobal.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Autocad/SynoptiqueGlobal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Autocad/Pa.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Autocad/Pa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Autocad/Pmz.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Autocad/Pmz.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +163,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -207,6 +206,13 @@
       <workItem from="1576578382945" duration="16966000" />
       <workItem from="1576659601281" duration="10687000" />
       <workItem from="1576674184797" duration="3000" />
+      <workItem from="1576678566754" duration="237000" />
+      <workItem from="1576678826558" duration="790000" />
+      <workItem from="1576679639021" duration="447000" />
+      <workItem from="1576680115548" duration="173000" />
+      <workItem from="1576680396597" duration="1268000" />
+      <workItem from="1576682547478" duration="1074000" />
+      <workItem from="1576683729244" duration="909000" />
     </task>
     <task id="LOCAL-00001" summary="Creation Automatique PB">
       <created>1575533689378</created>
@@ -271,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576138827068</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fin schéma">
+      <created>1576675934344</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576675934344</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -296,31 +309,45 @@
     <MESSAGE value="Refonte avec les bonnes cotes&#10;PMZ + PA + PB" />
     <MESSAGE value="PMZ to PA" />
     <MESSAGE value="Ligne téléphone" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ligne téléphone" />
+    <MESSAGE value="Fin schéma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fin schéma" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="535" y="188" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576658770931">
+    <state x="310" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576678418055">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="535" y="188" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576658770931" />
+    <state x="310" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576678418055" />
+    <state x="535" y="188" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576680281433">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="535" y="188" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576680281433" />
+    <state x="585" y="215" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1576682949479">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="585" y="215" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576682949479" />
+    <state x="509" y="50" key="CommitChangelistDialog2" timestamp="1576675933041">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="509" y="50" key="CommitChangelistDialog2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576675933041" />
+    <state x="435" y="197" key="IDE.errors.dialog" timestamp="1576682395989">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="435" y="197" key="IDE.errors.dialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576682395989" />
+    <state x="364" y="103" key="SettingsEditor" timestamp="1576680245838">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="364" y="103" key="SettingsEditor/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576680245838" />
+    <state x="447" y="189" key="Vcs.Push.Dialog.v2" timestamp="1576675937626">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="447" y="189" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576675937626" />
     <state x="549" y="65" width="740" height="789" key="find.popup" timestamp="1576581217042">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="549" y="65" width="740" height="789" key="find.popup/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576581217042" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state x="516" y="196" width="672" height="678" key="search.everywhere.popup" timestamp="1576678413131">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="516" y="196" width="672" height="678" key="search.everywhere.popup/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576678413131" />
   </component>
 </project>

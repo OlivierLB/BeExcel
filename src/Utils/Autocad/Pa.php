@@ -9,6 +9,7 @@
 namespace App\Utils\Autocad;
 
 
+use App\Utils\GestionExcel;
 use olivierlb\phpdxf\Color;
 use olivierlb\phpdxf\LineType;
 
@@ -16,6 +17,9 @@ class Pa {
     public function addPa($dxf, $spreadsheet){
         $x = -41.13;
         $y = 5.18;
+
+        $pageDeGarde = $spreadsheet->getSheetByName('page_de_garde');
+        $gestionExcel = new GestionExcel();
 
         $dxf->setLayer('rouge')
             ->addPolyline([
@@ -32,15 +36,15 @@ class Pa {
                 $x, $y - 3.4
             ], 0, 0.3)
             ->setLayer('texte')
-            ->addText($x + 0.5, $y - 0.75, 0, "PA : ", 1.875, 1)
+            ->addText($x + 0.5, $y - 0.75, 0, "PA : " . substr($gestionExcel->getCalculatedValue($pageDeGarde, 11, 13), -5), 1.875, 1)
             ->addText($x + 0.5, $y - 4.5, 0, "PT : ", 1.875, 1)
             ->addText($x + 0.5, $y - 8.25, 0, "PF : ", 1.875, 1)
-            ->addText($x + 0.5, $y - 11.5, 0, "Code ch. IPON : ", 1.875, 1)
+            ->addText($x + 0.5, $y - 11.5, 0, "Code ch. IPON : " . substr($gestionExcel->getCalculatedValue($pageDeGarde, 9, 15),4, 8 ), 1.875, 1)
             ->addText($x + 0.5, $y - 14.75, 0, "ADR : ", 1.875, 1)
-            ->addText($x + 0.5, $y - 18, 0, "ELR : ", 1.875, 1)
+            ->addText($x + 0.5, $y - 18, 0, "ELR : " . $gestionExcel->getOldCalculatedValue($pageDeGarde, 14, 28), 1.875, 1)
             ->addText($x + 0.5, $y - 21.25, 0, "TYPE PEO : ", 1.875, 1)
             ->addText($x + 0.5, $y - 24.5, 0, "SORTIES : ", 1.875, 1)
-            ->addText($x + 0.5, $y - 27.75, 0, "NB µmodules : ", 1.875, 1)
+            ->addText($x + 0.5, $y - 27.75, 0, "NB µmodules : " . $gestionExcel->getOldCalculatedValue($pageDeGarde, 14, 36), 1.875, 1)
             ->addText($x   + 5, $y - 45, 0, "Jonction", 4.125, 1)
             ->addPolyline([
                 $x - 5, $y - 50,
