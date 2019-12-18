@@ -16,7 +16,11 @@ use olivierlb\phpdxf\LineType;
 
 class EtiquettePB {
 
-    public function listPB($dxf, $spreadsheet){
+    public function gestionPB($dxf, $spreadsheet){
+        $this->listPB($dxf, $spreadsheet);
+    }
+
+    private function listPB($dxf, $spreadsheet){
         $x = -150;
         $y = 150;
 

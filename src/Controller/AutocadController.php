@@ -50,12 +50,10 @@ class AutocadController extends AbstractController {
 
         try{
             $spreadsheet = $reader->load($url);
-            $etiquettePB->listPB($dxf, $spreadsheet);
+            $etiquettePB->gestionPB($dxf, $spreadsheet);
             $pmz->addPmz($dxf, $spreadsheet);
             $global->setGlobal($dxf);
             $pa->addPa($dxf, $spreadsheet);
-
-
         }catch (FileException $e){
             return new Response($e->getMessage());
         }

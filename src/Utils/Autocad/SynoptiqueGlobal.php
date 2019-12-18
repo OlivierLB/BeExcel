@@ -35,25 +35,223 @@ class SynoptiqueGlobal {
         $this->addModules($dxf);
         $this->addPmzToPa($dxf);
         $this->addLignes($dxf);
+        $this->addSymboles($dxf);
+    }
+
+    private function addSymboles($dxf){
+        $x = -600;
+        $y = -280;
+
+        $dxf->setLayer('fondVert')
+            ->addCircle($x, $y, 0, 6)
+            ->addCircle($x + 19, $y - 30, 0, 6)
+            ->addCircle($x + 50, $y - 30, 0, 6)
+            ->setLayer('texte')
+            ->addText($x - 7, $y - 7, 0, 'FT 0XXXXX', 1.8, 1)
+            ->addText($x - 6, $y - 10, 0, 'Adresse', 2.5, 1)
+            ->setLayer('fondBleu')
+            ->addCircle($x + 20, $y, 0, 6)
+            ->addCircle($x + 80, $y - 30, 0, 6)
+            ->setLayer('texte')
+            ->addCircle($x + 110, $y - 30, 0, 6)
+            ->addCircle($x + 110, $y - 30, 0, 1)
+            ->addLine($x + 110, $y - 28.5, 0, $x + 110, $y - 26, 0)
+            ->addLine($x + 110, $y - 31.5, 0, $x + 110, $y - 34, 0)
+            ->addLine($x + 111.3, $y - 30.75, 0, $x + 113.46, $y - 32, 0)
+            ->addLine($x + 108.7, $y - 30.75, 0, $x + 106.54, $y - 32, 0)
+            ->addLine($x + 111.3, $y - 29.25, 0, $x + 113.46, $y - 28, 0)
+            ->addLine($x + 108.7, $y - 29.25, 0, $x + 106.54, $y - 28, 0)
+            ->addPolyline([
+                $x + 15.442, $y - 3,
+                $x + 20, $y + 1.5,
+                $x + 20, $y - 1.5,
+                $x + 23, $y + 1.5
+            ], 0, 0.2)
+            ->addPolyline([
+                $x + 50, $y - 30,
+                $x + 50, $y - 26.2,
+                $x + 50, $y - 30,
+                $x + 52.89, $y - 32.89,
+                $x + 50, $y - 30,
+                $x + 47.11, $y - 32.89,
+                $x + 50, $y - 30,
+            ], 0, 0.2)
+            ->addpolyline([
+                $x + 75.442, $y - 33,
+                $x + 80, $y - 28.5,
+                $x + 80, $y - 31.5,
+                $x + 83, $y - 28.5,
+                $x + 82.46, $y - 27.96,
+                $x + 83.54, $y - 29.04,
+                $x + 84.16, $y - 27.35,
+                $x + 82.46, $y - 27.96,
+                $x + 83, $y - 28.5,
+            ], 0, 0.2)
+            ->addText($x + 14, $y - 7, 0, 'ERDF 0XX', 1.8, 1)
+            ->addText($x + 15, $y - 10, 0, 'Adresse', 2.5, 1)
+            ->setLayer('fondRouge')
+            ->addPolyline([
+                $x + 30, $y + 7.5,
+                $x + 45, $y + 7.5,
+                $x + 45, $y - 7.5,
+                $x + 30, $y - 7.5,
+                $x + 30, $y + 7.5
+            ])
+            ->addPolyline([
+                $x - 72, $y,
+                $x - 36, $y,
+                $x - 36, $y - 22.81,
+                $x - 72, $y - 22.81,
+                $x - 72, $y
+            ], 0, 0.4)
+            ->addPolyline([
+                $x - 48.67, $y,
+                $x - 48.67, $y - 3.27,
+                $x - 36, $y - 3.27,
+                $x - 72, $y - 3.27
+            ], 0, 0.4)
+            ->setLayer('texte')
+            ->addText($x + 30, $y - 8.5, 0, 'LXT/0XXXX', 1.8, 1)
+            ->addText($x + 31, $y - 11.5, 0, 'Adresse', 2.5, 1)
+            ->addText($x - 71, $y - 0.5, 0, "PEP : xx", 1.875, 1)
+            ->addText($x - 48, $y - 0.5, 0, "DERIV.", 1.875, 1)
+            ->addText($x - 71, $y - 4, 0, "PT : xx", 1.875, 1)
+            ->addText($x - 71, $y - 7, 0, "Propriétaire : xx", 1.875, 1)
+            ->addText($x - 71, $y - 10, 0, "N° Poteau : xx", 1.875, 1)
+            ->addText($x - 71, $y - 13, 0, "N° type VOIE : xx", 1.875, 1)
+            ->addText($x - 71, $y - 16, 0, "ADR : xx", 1.875, 1)
+            ->addText($x - 71, $y - 19, 0, "TYPE PEO : xx", 1.875, 1)
+            ->addText($x - 69.5, $y - 28, 0, "PEP XXX", 4.5, 1)
+            ->addPolyline([
+                $x - 72.5, $y - 26,
+                $x - 35.43, $y - 26,
+                $x - 35.43, $y - 36.03,
+                $x - 72.5, $y - 36.03,
+                $x - 72.5, $y - 26
+            ])
+            ->addpolyline([
+                $x + 18, $y - 26.5,
+                $x + 22.39, $y - 26.5,
+                $x + 20.54, $y - 26.5,
+                $x + 20.54, $y - 29.5,
+                $x + 14.65, $y - 29.5,
+                $x + 20.54, $y - 29.5,
+                $x + 17.36, $y - 33.68,
+            ], 0, 0.2)
+            ->saveToFile('synoptiqueGenere.dxf');
+
+        $this->addBlocsColore($dxf);
+
+    }
+
+    private function addBlocsColore($dxf){
+        $ordre = ['fondRouge',
+            'fondBleu',
+            'fondVert',
+            'fondJaune',
+            'fondViolet',
+            'texte',
+            'fondOrange',
+            'fondGris',
+            'fondMarron',
+            'texteNoir',
+            'fondTurquoise',
+            'fondMagenta',
+            'fondRouge',
+            'fondBleu',
+            'fondVert',
+            'fondJaune',
+            'fondViolet',
+            'texte',
+            'fondOrange',
+            'fondGris',
+            'fondMarron',
+            'texteNoir',
+            'fondTurquoise',
+            'fondMagenta'];
+
+        $nb = 0;
+        $x = -660;
+        $y = $yInit = -321;
+
+        foreach ($ordre as $i => $fond){
+            switch ($fond){
+                case 'fondJaune':
+                case 'texte':
+                    $textColor = 'texteNoir';
+                    break;
+                default:
+                    $textColor = 'texte';
+            }
+
+            if($i % 2 === 0)
+                $nb = str_pad($nb+1, 2, 0, STR_PAD_LEFT);
+
+            if($i < 10){
+                $dxf->setLayer('texte')
+                    ->addLine($x + 12.57, $y, 0, $x + 14.14, $y, 0)
+                    ->saveToFile('synoptiqueGenere.dxf');
+            }
+
+            $dxf->setLayer($fond)
+                ->addPolyline([
+                    $x, $y,
+                    $x + 12.57, $y
+                ], 0, 3.15 )
+                ->setLayer($textColor)
+                ->addText($x + 3, $y + 0.7, 0, "K7-" . $nb, 1.7109, 1)
+                ->setLayer('texte')
+                ->addLine($x, $y, 0, $x - 1.57, $y, 0)
+                ->saveToFile('synoptiqueGenere.dxf');
+            $y = $y - 3.5;
+
+        }
+        $dxf->setLayer('texte')
+            ->addLine($x - 1.57, $yInit, 0, $x - 1.57, $y + 3.5, 0)
+            ->addLine($x + 14.14, $yInit, 0, $x + 14.14, $yInit - 31.5, 0)
+            ->addPolyline([
+                $x - 3.14, $yInit + 2.91,
+                $x + 15.72, $yInit + 2.91,
+                $x + 15.72, $y - 0.59,
+                $x - 3.14, $y - 0.59,
+                $x - 3.14, $yInit + 2.91
+            ])
+            ->saveToFile('synoptiqueGenere.dxf');
     }
 
     private function addLignes($dxf){
         $x = -600;
-        $y = -400;
+        $y = -380;
 
         $dxf->setLayer('texte')
             ->addLine($x, $y, 0, $x + 300, $y, 0)
+            ->addLine($x, $y - 20, 0, $x + 300, $y - 20, 0)
+            ->setLayer('blancDashed', Color::WHITE, LineType::DASHED)
+            ->addPolyline([
+                $x, $y - 40,
+                $x + 300, $y - 40
+            ], 0, 0, 0.1)
             ->saveToFile('synoptiqueGenere.dxf');
 
         for($i = $x; $i <= $x + 295; $i = $i + 15){
             $dxf->setLayer('texte')
                 ->addPolyline([
-                    $i + 5, $y,
-                    $i + 4, $y + 2,
-                    $i + 5, $y,
-                    $i + 6, $y + 2,
-                    $i + 5, $y
-                ], 0, 0);
+                    $i + 5, $y + 0.2,
+                    $i + 4, $y + 2.2,
+                    $i + 5, $y + 0.2,
+                    $i + 6, $y + 2.2,
+                    $i + 5, $y + 0.2
+                ], 0, 0.2)
+                ->saveToFile('synoptiqueGenere.dxf');
+        }
+        for($i = $x; $i <= $x + 295; $i = $i + 7){
+            $dxf->setLayer('texte')
+                ->addPolyline([
+                    $i + 5, $y - 20,
+                    $i + 6, $y - 18,
+                    $i + 5, $y - 20
+                ])
+                ->saveToFile('synoptiqueGenere.dxf');
         }
     }
 
