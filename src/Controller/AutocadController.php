@@ -42,6 +42,8 @@ class AutocadController extends AbstractController {
         $pmz = new Pmz();
         $global = new SynoptiqueGlobal();
         $pa = new Pa();
+        $paramJson = file_get_contents('uploads/param.json');
+        $paramObject = json_decode($paramJson);
 
         //Récupération de l'url du fichier
         $url = $this->parameterBag->get('kernel.project_dir'). '/public/uploads/toCheck.xlsx';
@@ -50,7 +52,7 @@ class AutocadController extends AbstractController {
 
         try{
             $spreadsheet = $reader->load($url);
-            $etiquettePB->gestionPB($dxf, $spreadsheet);
+            $etiquettePB->gestionPB($dxf, $spreadsheet, $paramObject);
             $pmz->addPmz($dxf, $spreadsheet);
             $global->setGlobal($dxf);
             $pa->addPa($dxf, $spreadsheet);

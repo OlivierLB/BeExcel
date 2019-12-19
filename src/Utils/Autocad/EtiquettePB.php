@@ -9,6 +9,7 @@
 namespace App\Utils\Autocad;
 
 
+use App\Utils\ChiffreFromLettre;
 use App\Utils\GestionExcel;
 use olivierlb\phpdxf\Color;
 use olivierlb\phpdxf\LineType;
@@ -16,27 +17,28 @@ use olivierlb\phpdxf\LineType;
 
 class EtiquettePB {
 
-    public function gestionPB($dxf, $spreadsheet){
-        $this->listPB($dxf, $spreadsheet);
+    public function gestionPB($dxf, $spreadsheet, $paramObject){
+        $this->listPB($dxf, $spreadsheet, $paramObject);
     }
 
-    private function listPB($dxf, $spreadsheet){
+    private function listPB($dxf, $spreadsheet, $paramObject){
         $x = -150;
         $y = 150;
 
         $positionnementEtude = $spreadsheet->getSheetByName('positionnement-etude');
         $gestionExcel = new GestionExcel();
+        $chiffreFromLettre = new ChiffreFromLettre();
 
         for ($i = 5; $i <= 80; $i++) {
             if($gestionExcel->getCalculatedValue($positionnementEtude, 1, $i)){
-                if($gestionExcel->getCalculatedValue($positionnementEtude,16, $i) !== $gestionExcel->getCalculatedValue($positionnementEtude,16, $i - 1)){
-                    $data['troncon'] = $gestionExcel->getCalculatedValue($positionnementEtude,22, $i);
-                    $data['ELR'] = $gestionExcel->getOldCalculatedValue($positionnementEtude,15, $i);
-                    $data['ADR'] = $gestionExcel->getOldCalculatedValue($positionnementEtude,24, $i);
-                    $data['codeCH'] = $gestionExcel->getOldCalculatedValue($positionnementEtude,23, $i);
+                if($gestionExcel->getCalculatedValue($positionnementEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->pseColIdGeo), $i) !== $gestionExcel->getCalculatedValue($positionnementEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->pseColIdGeo), $i - 1)){
+                    $data['troncon'] = $gestionExcel->getCalculatedValue($positionnementEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->pseColTro), $i);
+                    $data['ELR'] = $gestionExcel->getOldCalculatedValue($positionnementEtude,$chiffreFromLettre->getChiffreFromLettre($paramObject->pseColNbSum), $i);
+                    $data['ADR'] = $gestionExcel->getOldCalculatedValue($positionnementEtude,$chiffreFromLettre->getChiffreFromLettre($paramObject->pseColAdr), $i);
+                    $data['codeCH'] = $gestionExcel->getOldCalculatedValue($positionnementEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->pseColSit), $i);
                 }
-                if($gestionExcel->getCalculatedValue($positionnementEtude,16, $i) !== $gestionExcel->getCalculatedValue($positionnementEtude,16, $i + 1)){
-                    $data['PB'] =  substr($gestionExcel->getCalculatedValue($positionnementEtude,16, $i), -5);
+                if($gestionExcel->getCalculatedValue($positionnementEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->pseColIdGeo), $i) !== $gestionExcel->getCalculatedValue($positionnementEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->pseColIdGeo), $i + 1)){
+                    $data['PB'] =  substr($gestionExcel->getCalculatedValue($positionnementEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->pseColIdGeo), $i), -5);
                     $this->newEtiquettePB($x, $y, $dxf, $data);
                     $x += 60;
                 }

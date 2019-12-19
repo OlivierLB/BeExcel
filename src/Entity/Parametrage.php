@@ -161,6 +161,26 @@ class Parametrage
      */
     private $pseLiDe;
 
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $pseColTro;
+
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $pseColAdr;
+
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $pseColSit;
+
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $pseColIdGeo;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -510,6 +530,54 @@ class Parametrage
     public function setPseLiDe(int $pseLiDe): self
     {
         $this->pseLiDe = $pseLiDe;
+
+        return $this;
+    }
+
+    public function getPseColTro(): ?string
+    {
+        return $this->pseColTro;
+    }
+
+    public function setPseColTro(?string $pseColTro): self
+    {
+        $this->pseColTro = $pseColTro;
+
+        return $this;
+    }
+
+    public function getPseColAdr(): ?string
+    {
+        return $this->pseColAdr;
+    }
+
+    public function setPseColAdr(?string $pseColAdr): self
+    {
+        $this->pseColAdr = $pseColAdr;
+
+        return $this;
+    }
+
+    public function getPseColSit(): ?string
+    {
+        return $this->pseColSit;
+    }
+
+    public function setPseColSit(?string $pseColSit): self
+    {
+        $this->pseColSit = $pseColSit;
+
+        return $this;
+    }
+
+    public function getPseColIdGeo(): ?string
+    {
+        return $this->pseColIdGeo;
+    }
+
+    public function setPseColIdGeo(?string $pseColIdGeo): self
+    {
+        $this->pseColIdGeo = $pseColIdGeo;
 
         return $this;
     }

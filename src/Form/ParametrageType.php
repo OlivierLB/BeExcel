@@ -88,6 +88,18 @@ class ParametrageType extends AbstractType
             ->add('pseLiDe', TextType::class, [
                 'data' => $paramObject->positionnement->pseLiDe
             ])
+            ->add('pseColTro', TextType::class, [
+                'data' => $paramObject->positionnement->pseColTro
+            ])
+            ->add('pseColAdr', TextType::class, [
+                'data' => $paramObject->positionnement->pseColAdr
+            ])
+            ->add('pseColIdGeo', TextType::class, [
+                'data' => $paramObject->positionnement->pseColIdGeo
+            ])
+            ->add('pseColSit', TextType::class, [
+                'data' => $paramObject->positionnement->pseColSit
+            ])
             ->add('sbColNb', TextType::class, [
                 'data' => $paramObject->synoptique->sbColNb
             ])

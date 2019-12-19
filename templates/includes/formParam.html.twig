@@ -115,15 +115,34 @@
             </div>
         </div>
         <div class="input-field col s12 m12 l12">
-            <div class="input-field col s6 m6 l6">
+            <div class="input-field col s4 m4 l4">
                 {{ form_widget(form.pseColNb) }}
                 {{ form_label(form.pseColNb, 'Colonne Nbre_Log') }}
             </div>
-            <div class="input-field col s6 m6 l6">
+            <div class="input-field col s4 m4 l4">
                 {{ form_widget(form.pseColNbSum) }}
                 {{ form_label(form.pseColNbSum, 'Colonne Nbre_Log à grouper par géofibre') }}
             </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pseColIdGeo) }}
+                {{ form_label(form.pseColIdGeo, 'Colonne id Géofibre') }}
+            </div>
         </div>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pseColTro) }}
+                {{ form_label(form.pseColTro, 'Colonne tronçon') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pseColAdr) }}
+                {{ form_label(form.pseColAdr, 'Colonne adresse') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pseColSit) }}
+                {{ form_label(form.pseColSit, 'Colonne numéro site') }}
+            </div>
+        </div>
+
 
         <p class="title">Synoptique bilan µmodules</p>
         <div class="input-field col s12 m12 l12">

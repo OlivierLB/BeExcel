@@ -45,7 +45,6 @@ class Pmz {
     }
 
     private function addContour($x, $y, $dxf){
-
         $dxf->setLayer('pmz', Color::MAGENTA, LineType::SOLID)
             ->addLine($x, $y, 0, $x + 53.04, $y, 0)
             ->addLine($x, $y - 204.95, 0, $x + 53.04, $y - 204.95, 0)
@@ -84,5 +83,4 @@ class Pmz {
             ->addText($x + 0.5, $y - 18, 0, "ELR : ", 1.875, 1)
             ->saveToFile('synoptiqueGenere.dxf');
     }
-
 }
