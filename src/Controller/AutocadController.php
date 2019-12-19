@@ -42,6 +42,7 @@ class AutocadController extends AbstractController {
         $pmz = new Pmz();
         $global = new SynoptiqueGlobal();
         $pa = new Pa();
+
         $paramJson = file_get_contents('uploads/param.json');
         $paramObject = json_decode($paramJson);
 
@@ -59,9 +60,6 @@ class AutocadController extends AbstractController {
         }catch (FileException $e){
             return new Response($e->getMessage());
         }
-
-
-
 
         return $this->render('be/autocad/import.html.twig');
     }

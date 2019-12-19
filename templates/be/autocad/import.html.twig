@@ -3,9 +3,11 @@
 {% block title %}BE | vérification Excel{% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="input-file-container">
         <div class="input-field col s12 m12 l12">
-            <h1>Autocad c'est trop bien ! </h1>
+            <form method="get" action="synoptiqueGenere.dxf">
+                <button class="btnDownload" type="submit">Telecharger fichier DXF</button>
+            </form>
         </div>
     </div>
 {% endblock %}

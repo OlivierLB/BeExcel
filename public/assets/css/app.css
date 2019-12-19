@@ -114,3 +114,22 @@ nav {
     font-weight: bold;
     font-family: "Times New Roman";
 }
+
+.btnDownload{
+    width:500px;
+    height:500px;
+    background:#2D2D2D;
+    font:bold 40px Arial;
+    border-radius:50%;
+    border:none;
+    color:#ff6908;
+}
+
+.btnDownload:hover{
+    cursor: url("../images/nat722.cur"), auto;
+}
+
+.btnDownload:focus{
+    background-color: #ff6908;
+    color: #2D2D2D;
+}
