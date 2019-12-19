@@ -124,4 +124,12 @@ class ParametrageTest extends TestCase {
         $parametrage->setSbColNb($uri);
         $this->assertEquals('O', $parametrage->getSbColNb());
     }
+
+    public function testPseColIdGeo(){
+        $parametrage = new Parametrage();
+        $uri = 'p';
+        $parametrage->setPseColIdGeo($uri);
+        $this->assertEquals('P', $parametrage->getPseColIdGeo());
+
+    }
 }

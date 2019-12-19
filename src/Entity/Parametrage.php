@@ -181,6 +181,31 @@ class Parametrage
      */
     private $pseColIdGeo;
 
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $pgColEmpPa;
+
+    /**
+     * @ORM\Column(type="smallint", nullable=true)
+     */
+    private $pgLiEmpPa;
+
+    /**
+     * @ORM\Column(type="smallint", nullable=true)
+     */
+    private $pgLiPaGeo;
+
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $pgColLog;
+
+    /**
+     * @ORM\Column(type="smallint", nullable=true)
+     */
+    private $pgLiLog;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -578,6 +603,66 @@ class Parametrage
     public function setPseColIdGeo(?string $pseColIdGeo): self
     {
         $this->pseColIdGeo = $pseColIdGeo;
+
+        return $this;
+    }
+
+    public function getPgColEmpPa(): ?string
+    {
+        return $this->pgColEmpPa;
+    }
+
+    public function setPgColEmpPa(?string $pgColEmpPa): self
+    {
+        $this->pgColEmpPa = $pgColEmpPa;
+
+        return $this;
+    }
+
+    public function getPgLiEmpPa(): ?int
+    {
+        return $this->pgLiEmpPa;
+    }
+
+    public function setPgLiEmpPa(?int $pgLiEmpPa): self
+    {
+        $this->pgLiEmpPa = $pgLiEmpPa;
+
+        return $this;
+    }
+
+    public function getPgLiPaGeo(): ?int
+    {
+        return $this->pgLiPaGeo;
+    }
+
+    public function setPgLiPaGeo(?int $pgLiPaGeo): self
+    {
+        $this->pgLiPaGeo = $pgLiPaGeo;
+
+        return $this;
+    }
+
+    public function getPgColLog(): ?string
+    {
+        return $this->pgColLog;
+    }
+
+    public function setPgColLog(?string $pgColLog): self
+    {
+        $this->pgColLog = $pgColLog;
+
+        return $this;
+    }
+
+    public function getPgLiLog(): ?int
+    {
+        return $this->pgLiLog;
+    }
+
+    public function setPgLiLog(?int $pgLiLog): self
+    {
+        $this->pgLiLog = $pgLiLog;
 
         return $this;
     }

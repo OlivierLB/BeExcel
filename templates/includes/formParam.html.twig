@@ -22,7 +22,6 @@
                 {{ form_label(form.pgColInfos, 'Colonne des informations') }}
             </div>
         </div>
-
         <div class="input-field col s12 m12 l12">
             <div class="input-field col s4 m l4">
                 {{ form_widget(form.pgColLab) }}
@@ -37,13 +36,16 @@
                 {{ form_label(form.pgColLabNb, 'Colonne label nombre de µmodules [...] PMZ-PA') }}
             </div>
         </div>
-
         <div class="input-field col s12 m12 l12">
-            <div class="input-field col s6 m6 l6">
+            <div class="input-field col s4 m4 l4">
                 {{ form_widget(form.pgColPaGeo) }}
                 {{ form_label(form.pgColPaGeo, 'Colonne donnée réseau PMZ & PA géofibre') }}
             </div>
-            <div class="input-field col s6 m6 l6">
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.pgLiPaGeo) }}
+                {{ form_label(form.pgLiPaGeo, 'Ligne donnée réseau PMZ & PA géofibre') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
                 {{ form_widget(form.pgColPaId) }}
                 {{ form_label(form.pgColPaId, 'Colonne donnée réseau PMZ & PA identifiant') }}
             </div>
@@ -58,7 +60,6 @@
                 {{ form_label(form.pgLiPa, 'Ligne données réseau PA') }}
             </div>
         </div>
-
         <div class="input-field col s12 m12 l12">
             <div class="input-field col s4 m4 l4">
                 {{ form_widget(form.pgColNbPmz) }}
@@ -73,6 +74,27 @@
                 {{ form_label(form.pgLiNb, 'Ligne données positionnement étude') }}
             </div>
         </div>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pgColEmpPa) }}
+                {{ form_label(form.pgColEmpPa, 'Collone emplacement PA') }}
+            </div>
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pgLiEmpPa) }}
+                {{ form_label(form.pgLiEmpPa, 'Ligne emplacement PA') }}
+            </div>
+        </div>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pgColLog) }}
+                {{ form_label(form.pgColLog, 'Collone logement') }}
+            </div>
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.pgLiLog) }}
+                {{ form_label(form.pgLiLog, 'Ligne logement') }}
+            </div>
+        </div>
+
         <p class="title">Pointage étude</p>
         <div class="input-field col s12 m12 l12">
             <div class="input-field col s4 m4 l4">
@@ -88,7 +110,6 @@
                 {{ form_label(form.peLiDe, 'Ligne début données') }}
             </div>
         </div>
-
         <div class="input-field col s12 m12 l12">
             <div class="input-field col s4 m4 l4">
                 {{ form_widget(form.peColNbre) }}
@@ -103,6 +124,7 @@
                 {{ form_label(form.peColMenu, 'Colonne menu déroulant') }}
             </div>
         </div>
+
         <p class="title">Positionnement étude</p>
         <div class="input-field col s12 m12 l12">
             <div class="input-field col s6 m6 l6">
@@ -143,7 +165,6 @@
             </div>
         </div>
 
-
         <p class="title">Synoptique bilan µmodules</p>
         <div class="input-field col s12 m12 l12">
             <div class="input-field col s4 m4 l4">
@@ -159,6 +180,7 @@
                 {{ form_label(form.sbColNb, 'Colonne nombre de µmodules') }}
             </div>
         </div>
+
         <div class="input-field col s12 m12 l12">
             <div class="input-field col s10 m10 l10"></div>
             <div class="input-field col s2 m2 l2">

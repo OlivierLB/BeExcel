@@ -9,18 +9,19 @@
 namespace App\Utils\Autocad;
 
 
+use App\Utils\ChiffreFromLettre;
 use App\Utils\GestionExcel;
 use olivierlb\phpdxf\Color;
 use olivierlb\phpdxf\LineType;
 
 class Pmz {
 
-    public function addPmz($dxf, $spreadsheet){
+    public function addPmz($dxf, $spreadsheet, $paramObject){
         $x = -192.95;
         $y = -35.25;
 
         $this->addContour($x, $y, $dxf);
-        $this->addPmzInfos($dxf, $spreadsheet);
+        $this->addPmzInfos($dxf, $spreadsheet, $paramObject);
         for($i = 1; $i <= 4; $i++){
             $this->addTete($x, $y, $i, $dxf);
             $y -= 50.31;
@@ -53,12 +54,13 @@ class Pmz {
             ->saveToFile("synoptiqueGenere.dxf");
     }
 
-    private function addPmzInfos($dxf, $spreadsheet){
+    private function addPmzInfos($dxf, $spreadsheet, $paramObject){
         $x = -184.16;
         $y = -10.63;
 
         $pageDeGarde = $spreadsheet->getSheetByName('page_de_garde');
         $gestionExcel = new GestionExcel();
+        $chiffreFromLettre = new ChiffreFromLettre();
 
         $dxf->setLayer('rouge', Color::RED, LineType::SOLID)
             ->addPolyline([
@@ -75,7 +77,7 @@ class Pmz {
                 $x, $y - 3.34
             ], 0, 0.3)
             ->setLayer('texte')
-            ->addText($x + 0.5, $y - 0.75, 0, "PMZ : " . substr($gestionExcel->getCalculatedValue($pageDeGarde, 11, 12), -5), 1.875, 1)
+            ->addText($x + 0.5, $y - 0.75, 0, "PMZ : " . substr($gestionExcel->getCalculatedValue($pageDeGarde, $chiffreFromLettre->getChiffreFromLettre($paramObject->pgColPaGeo), $paramObject->pgLiPmz), -5), 1.875, 1)
             ->addText($x + 0.5, $y - 4.5, 0, "PT : ", 1.875, 1)
             ->addText($x + 0.5, $y - 8.25, 0, "PF : ", 1.875, 1)
             ->addText($x + 0.5, $y - 11.5, 0, "Code ch. IPON : ", 1.875, 1)

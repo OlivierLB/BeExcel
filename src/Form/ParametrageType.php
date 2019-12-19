@@ -55,6 +55,21 @@ class ParametrageType extends AbstractType
             ->add('pgColLabNb', TextType::class, [
                 'data' => $paramObject->pageDeGarde->pgColLabNb
             ])
+            ->add('pgColEmpPa', TextType::class, [
+                'data' => $paramObject->pageDeGarde->pgColEmpPa
+            ])
+            ->add('pgLiEmpPa', TextType::class, [
+                'data' => $paramObject->pageDeGarde->pgLiEmpPa
+            ])
+            ->add('pgLiPaGeo', TextType::class, [
+                'data' => $paramObject->pageDeGarde->pgLiPaGeo
+            ])
+            ->add('pgColLog', TextType::class, [
+                'data' => $paramObject->pageDeGarde->pgColLog
+            ])
+            ->add('pgLiLog', TextType::class, [
+                'data' => $paramObject->pageDeGarde->pgLiLog
+            ])
             ->add('version', TextType::class, [
                 'data' => $paramObject->version
             ])

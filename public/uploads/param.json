@@ -13,7 +13,12 @@
     "pgColNbPmz":"J",
     "pgColNbPa":"N",
     "pgLiNb":36,
-    "pgColLabNb":"H"
+    "pgColLabNb":"H",
+    "pgColEmpPa":"I",
+    "pgLiEmpPa":15,
+    "pgLiPaGeo":36,
+    "pgColLog":"N",
+    "pgLiLog":28
   },
   "pointage":{
     "peColMenu":"T",
@@ -28,10 +33,10 @@
     "pseColNb":"N",
     "pseColNbSum":"O",
     "pseLiDe":"5",
-    "pseColTro" : "V",
-    "pseColAdr" : "X",
-    "pseColSit" : "W",
-    "pseColIdGeo" : "P"
+    "pseColTro":"V",
+    "pseColAdr":"X",
+    "pseColSit":"W",
+    "pseColIdGeo":"P"
   },
   "synoptique":{
     "sbColNb":"G",
