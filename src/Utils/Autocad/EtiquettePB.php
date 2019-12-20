@@ -60,25 +60,27 @@ class EtiquettePB {
             ->setLayer('contour', Color::BLUE, LineType::SOLID)
             ->addPolyline([
                 $x + 27.57, $y + 1,
+                $x + 27.57, $y + 1,
+                $x + 27.57, $y - 3.44,
+                $x + 27.57, $y + 1,
                 $x + 42.9, $y + 1,
+                $x + 42.9, $y - 3.44,
+                $x - 1, $y - 3.44,
+                $x + 42.9, $y - 3.44,
                 $x + 42.9, $y - 27.5,
                 $x - 1, $y - 27.5,
                 $x - 1, $y + 1,
-                $x + 27.57, $y + 1], 0, 0.30)
-            ->addPolyline([
-                $x + 27.57, $y + 1,
-                $x + 27.57, $y - 3.44,
-                $x + 27.57, $y + 1], 0, 0.3)
-            ->addPolyline([
-                $x - 1, $y - 3.44,
-                $x + 42.9, $y - 3.44,
-                $x - 1, $y - 3.44], 0, 0.3)
+                $x + 27.57, $y + 1
+            ], 0, 0.30)
             ->setLayer('texte')
+            ->addPolyline([
+                $x + 2.37, $y - 30.71,
+                $x + 35.59, $y - 30.71,
+                $x + 35.59, $y - 41.37,
+                $x + 2.37, $y - 41.37,
+                $x + 2.37, $y - 30.71
+            ])
             ->addText($x + 5, $y - 34, 0, "PB " . $data['PB'], 4.5, 1)
-            ->addLine($x + 2.37, $y - 30.71, 0, $x + 35.59, $y - 30.71, 0)
-            ->addLine($x + 2.37, $y - 30.71, 0, $x + 2.37, $y - 41.37, 0)
-            ->addLine($x + 35.59, $y - 30.71, 0, $x + 35.59, $y - 41.37, 0)
-            ->addLine($x + 2.37, $y - 41.37, 0, $x + 35.59, $y - 41.37, 0)
             ->saveToFile('synoptiqueGenere.dxf');
 
         $this->newDerivationPB($x, $y, $dxf, $data);
