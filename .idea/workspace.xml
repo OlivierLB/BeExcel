@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Application paramétrable">
+    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Bouton telechargement">
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error403.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AutocadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AutocadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/be/autocad/import.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/be/autocad/import.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/param.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/param.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/toCheck.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/toCheck.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Json.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Json.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/be/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/be/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/formParam.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/formParam.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,15 +188,15 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Olivier\Documents\Extia\BE\templates\be" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Olivier\Documents\Extia\BE\templates" />
       <recent name="C:\Users\Olivier\Documents\Extia\BE\templates\be\includes" />
+      <recent name="C:\Users\Olivier\Documents\Extia\BE\templates\be" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Olivier\Documents\Extia\BE\templates\be" />
     </key>
   </component>
@@ -231,7 +241,7 @@
       <workItem from="1576685849154" duration="4630000" />
       <workItem from="1576747073385" duration="9355000" />
       <workItem from="1576762599716" duration="6113000" />
-      <workItem from="1576769096223" duration="60000" />
+      <workItem from="1576769096223" duration="14357000" />
     </task>
     <task id="LOCAL-00001" summary="Creation Automatique PB">
       <created>1575533689378</created>
@@ -324,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576764075213</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Bouton telechargement">
+      <created>1576769247077</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576769247077</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +361,8 @@
     <MESSAGE value="Fin remplissage données" />
     <MESSAGE value="PB paramétrable" />
     <MESSAGE value="Application paramétrable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Application paramétrable" />
+    <MESSAGE value="Bouton telechargement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bouton telechargement" />
   </component>
   <component name="WindowStateProjectService">
     <state x="310" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576678418055">
@@ -359,10 +377,14 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="585" y="215" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576752248190" />
-    <state x="509" y="50" key="CommitChangelistDialog2" timestamp="1576769124551">
+    <state x="509" y="50" key="CommitChangelistDialog2" timestamp="1576769246199">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="509" y="50" key="CommitChangelistDialog2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576769124551" />
+    <state x="509" y="50" key="CommitChangelistDialog2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576769246199" />
+    <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1576847421302">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="94" y="94" width="1519" height="732" key="DiffContextDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576847421302" />
     <state x="635" y="217" key="FileChooserDialogImpl" timestamp="1576685365860">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -375,18 +397,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="588" y="281" key="NewPhpClassDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576764519994" />
-    <state x="364" y="103" key="SettingsEditor" timestamp="1576762579040">
+    <state x="364" y="103" key="SettingsEditor" timestamp="1576831985892">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="364" y="103" key="SettingsEditor/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576762579040" />
-    <state x="447" y="189" key="Vcs.Push.Dialog.v2" timestamp="1576685375832">
+    <state x="364" y="103" key="SettingsEditor/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576831985892" />
+    <state x="447" y="189" key="Vcs.Push.Dialog.v2" timestamp="1576769265529">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="447" y="189" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576685375832" />
-    <state x="549" y="65" width="740" height="789" key="find.popup" timestamp="1576581217042">
+    <state x="447" y="189" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576769265529" />
+    <state x="660" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576770416863">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="549" y="65" width="740" height="789" key="find.popup/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576581217042" />
+    <state x="660" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576770416863" />
+    <state x="549" y="65" width="740" height="789" key="find.popup" timestamp="1576770656038">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="549" y="65" width="740" height="789" key="find.popup/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576770656038" />
     <state x="512" y="211" key="run.anything.popup" timestamp="1576685361546">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

@@ -36,6 +36,11 @@ class Json {
         $pageGarde->pgColNbPa = $form->get('pgColNbPa')->getData();
         $pageGarde->pgLiNb = $form->get('pgLiNb')->getData();
         $pageGarde->pgColLabNb = $form->get('pgColLabNb')->getData();
+        $pageGarde->pgColEmpPa = $form->get('pgColEmpPa')->getData();
+        $pageGarde->pgLiEmpPa = $form->get('pgLiEmpPa')->getData();
+        $pageGarde->pgLiPaGeo = $form->get('pgLiPaGeo')->getData();
+        $pageGarde->pgColLog = $form->get('pgColLog')->getData();
+        $pageGarde->pgLiLog = $form->get('pgLiLog')->getData();
 
         $pointage->peColMenu = $form->get('peColMenu')->getData();
         $pointage->peColTotal = $form->get('peColTotal')->getData();
@@ -48,6 +53,10 @@ class Json {
         $positionnement->pseColNb = $form->get('pseColNb')->getData();
         $positionnement->pseColNbSum = $form->get('pseColNbSum')->getData();
         $positionnement->pseLiDe = $form->get('pseLiDe')->getData();
+        $positionnement->pseColTro = $form->get('pseColTro')->getData();
+        $positionnement->pseColAdr = $form->get('pseColAdr')->getData();
+        $positionnement->pseColSit = $form->get('pseColSit')->getData();
+        $positionnement->pseColIdGeo = $form->get('pseColIdGeo')->getData();
 
         $synoptique->sbColNb = $form->get('sbColNb')->getData();
         $synoptique->sbLiPmz = $form->get('sbLiPmz')->getData();

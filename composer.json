@@ -5,6 +5,7 @@
         "php": "^7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "ext-json": "*",
         "api-platform/api-pack": "^1.2",
         "easycorp/easyadmin-bundle": "^2.3",
         "olivierlb/phpdxf": "1.2.2",
@@ -30,11 +31,10 @@
         "symfony/serializer-pack": "*",
         "symfony/string": "5.0.*",
         "symfony/translation": "5.0.*",
-        "symfony/twig-pack": "*",
+        "symfony/twig-pack": "^1.0",
         "symfony/validator": "5.0.*",
         "symfony/web-link": "5.0.*",
-        "symfony/yaml": "5.0.*",
-      "ext-json": "*"
+        "symfony/yaml": "5.0.*"
     },
     "require-dev": {
         "symfony/debug-pack": "*",

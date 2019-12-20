@@ -34,18 +34,19 @@ nav {
     padding: 14px 0;
     cursor: pointer;
 }
-.input-file:hover + .input-file-trigger,
-.input-file:focus + .input-file-trigger,
-.input-file-trigger:hover,
+.input-file-trigger{
+    background: #2D2D2D;
+    color: #ff6908;
+}
+.input-file-trigger:hover{
+    cursor: url("../images/nat722.cur"), auto;
+    background-color: #ff6908;
+    color: #2D2D2D;
+}
 .input-file-trigger:focus {
-    background: #28282e;
-    color: #ff6908;
+    background-color: #ff6908;
+    color: #2D2D2D;
 }
-
-.input-field{
-    color: #ff6908;
-}
-
 .file-return {
     margin: 0;
 }
@@ -130,6 +131,20 @@ nav {
 }
 
 .btnDownload:focus{
+    background-color: #ff6908;
+    color: #2D2D2D;
+}
+
+.btnSave{
+    background: #2D2D2D;
+    color: #ff6908;
+}
+.btnSave:hover{
+    cursor: url("../images/nat722.cur"), auto;
+    background-color: #ff6908;
+    color: #2D2D2D;
+}
+.btnSave:focus{
     background-color: #ff6908;
     color: #2D2D2D;
 }
