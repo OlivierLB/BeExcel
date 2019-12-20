@@ -19,12 +19,11 @@ class Pointage {
         $chiffreFromLettre = new ChiffreFromLettre();
         $gestionExcel = new GestionExcel();
         for($i = $paramObject->peLiDe; $i <= $nbAdresse; $i++){
-            $calculatedValue = $gestionExcel->getCalculatedValue($pointageEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->peColMenu), $i);
+            $calculatedValue = $gestionExcel->getOldCalculatedValue($pointageEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->peColMenu), $i);
             if($calculatedValue === "Immeuble à supprimer" || $calculatedValue === "Immeuble hors PA"){
-                if($gestionExcel->getCalculatedValue($pointageEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->peColNbre), $i) == 0 ||
-                    $gestionExcel->getCalculatedValue($pointageEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->peColElr), $i) == 0 ||
-                    $gestionExcel->getCalculatedValue($pointageEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->peColElp), $i) == 0 ||
-                    $gestionExcel->getCalculatedValue($pointageEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->peColTotal), $i) == 0){
+                if( $gestionExcel->getOldCalculatedValue($pointageEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->peColElr), $i) != 0 ||
+                    $gestionExcel->getOldCalculatedValue($pointageEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->peColElp), $i) != 0 ||
+                    $gestionExcel->getOldCalculatedValue($pointageEtude, $chiffreFromLettre->getChiffreFromLettre($paramObject->peColTotal), $i) != 0){
                     array_push($errorPointage, "Erreur ligne $i de la feuille \"pointage-etude\"");
                 }
             }
