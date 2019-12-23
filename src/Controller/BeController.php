@@ -8,6 +8,7 @@ use App\Form\DocumentType;
 use App\Form\ParametrageType;
 use App\Utils\GestionExcel;
 use App\Utils\Json;
+use App\Utils\TraitementsExcel\Adductabilite;
 use App\Utils\TraitementsExcel\PageDeGarde;
 use App\Utils\TraitementsExcel\Pointage;
 use App\Utils\TraitementsExcel\Positionnement;
@@ -77,6 +78,7 @@ class BeController extends AbstractController
         $traitementPointage = new Pointage();
         $traitementPositionnement = new Positionnement();
         $traitementSynoptique = new Synoptique();
+        $traitementAdductabilite = new Adductabilite();
 
         //Récupération de l'url du fichier
         $url = $this->parameterBag->get('kernel.project_dir'). '/public/uploads/toCheck.xlsx';
@@ -95,6 +97,7 @@ class BeController extends AbstractController
             $pointageEtude = $spreadsheet->getSheetByName('pointage-etude');
             $positionnementEtude = $spreadsheet->getSheetByName('positionnement-etude');
             $synoptique = $spreadsheet->getSheetByName('synoptique-bilan µmodules');
+            $adductabilite = $spreadsheet->getSheetByName('adductabilité des sites');
             //Compte le nombre d'adresses qui ont été traité
             $nbAdresse = $gestionExcel->getNbAdresse($pointageEtude);
 
@@ -104,7 +107,7 @@ class BeController extends AbstractController
             $errorPointage = $traitementPointage->traitementPointage($pointageEtude, $nbAdresse, $paramObject->pointage);
             $errorPositionnement = $traitementPositionnement->traitementPositionnement($positionnementEtude, $nbAdresse, $paramObject->positionnement);
             $errorSynoptique = $traitementSynoptique->traitementSynoptique($synoptique, $paramObject->synoptique);
-
+            $errorAdductabilite = $traitementAdductabilite->traitementAdductabilite($adductabilite, $nbAdresse, $paramObject);
         }catch (FileException $e){
             return new Response($e->getMessage());
         }
@@ -114,7 +117,8 @@ class BeController extends AbstractController
             'errorGarde' => $errorGarde,
             'errorPointage' => $errorPointage,
             'errorPositionnement' => $errorPositionnement,
-            'errorSynoptique' => $errorSynoptique
+            'errorSynoptique' => $errorSynoptique,
+            'errorAdductabilite' => $errorAdductabilite
         ]);
     }
 
@@ -131,6 +135,4 @@ class BeController extends AbstractController
             'form' => $form->createView()
         ]);
     }
-
-
 }

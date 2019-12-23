@@ -85,6 +85,25 @@
             </div>
         {% endif %}
 
+        {% if errorAdductabilite %}
+            <div class="resultErreur" onclick="displayErrorDiv('displaySyno')">
+                <img width="30" src="{{ asset('assets/images/cross.png') }}">
+                <span>Erreur sur la page "Adductabilité des sites"</span>
+                <div class="displayError" id="displaySyno">
+                    <ul>
+                        {% for erreur in errorAdductabilite %}
+                            <li>{{ erreur }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% else %}
+            <div class="resultWork">
+                <img width="30" src="{{ asset('assets/images/check.png') }}">
+                <span>Aucune erreur sur la page "adductabilité des sites"</span>
+            </div>
+        {% endif %}
+
         <div class="resultWarning">
             <img width="30" src="{{ asset('assets/images/warning.png') }}" >
             <span>Assurez-vous d'avoir correctement renseigné la feuille "Photo situation PB"</span>
