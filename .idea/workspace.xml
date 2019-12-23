@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Utilisation Polyline PB">
-      <change afterPath="$PROJECT_DIR$/src/Utils/TraitementsExcel/Adductabilite.php" afterDir="false" />
+    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Ajout rêgle adductabilité des sites">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/uploads/toCheck.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/toCheck.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/be/verif.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/be/verif.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +224,7 @@
       <workItem from="1576685849154" duration="4630000" />
       <workItem from="1576747073385" duration="9355000" />
       <workItem from="1576762599716" duration="6113000" />
-      <workItem from="1576769096223" duration="29822000" />
+      <workItem from="1576769096223" duration="30244000" />
     </task>
     <task id="LOCAL-00001" summary="Creation Automatique PB">
       <created>1575533689378</created>
@@ -347,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576854710092</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Ajout rêgle adductabilité des sites">
+      <created>1577104649056</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1577104649056</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +376,8 @@
     <MESSAGE value="Personnalisation btn" />
     <MESSAGE value="Modification regle &quot;pointage etude&quot;" />
     <MESSAGE value="Utilisation Polyline PB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Utilisation Polyline PB" />
+    <MESSAGE value="Ajout rêgle adductabilité des sites" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout rêgle adductabilité des sites" />
   </component>
   <component name="WindowStateProjectService">
     <state x="310" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576678418055">
@@ -386,10 +392,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="585" y="215" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577090660501" />
-    <state x="509" y="50" key="CommitChangelistDialog2" timestamp="1576854708977">
+    <state x="509" y="50" key="CommitChangelistDialog2" timestamp="1577104648071">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="509" y="50" key="CommitChangelistDialog2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576854708977" />
+    <state x="509" y="50" key="CommitChangelistDialog2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577104648071" />
     <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1576847421302">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

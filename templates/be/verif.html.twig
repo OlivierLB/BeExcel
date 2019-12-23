@@ -7,7 +7,7 @@
         {% if errorGarde %}
             <div id="errorGarde" class="resultErreur" onclick="displayErrorDiv('displayGarde')">
                 <img width="30" src="{{ asset('assets/images/cross.png') }}">
-                <span>Erreur sur la page "Page de garde"</span>
+                <span>{{ errorGarde|length }} Erreur(s) sur la page "Page de garde"</span>
                 <div class="displayError" id="displayGarde">
                     <ul>
                     {% for erreur in errorGarde %}
@@ -28,7 +28,7 @@
         {% if errorPointage %}
             <div class="resultErreur" onclick="displayErrorDiv('displayPointage')">
                 <img width="30" src="{{ asset('assets/images/cross.png') }}">
-                <span>Erreur sur la page "Pointage étude"</span>
+                <span>{{ errorPointage|length }} Erreur(s) sur la page "Pointage étude"</span>
                 <div class="displayError" id="displayPointage">
                     <ul>
                         {% for erreur in errorPointage %}
@@ -49,7 +49,7 @@
         {% if errorPositionnement %}
             <div class="resultErreur" onclick="displayErrorDiv('displayPosi')">
                 <img width="30" src="{{ asset('assets/images/cross.png') }}">
-                <span>Erreur sur la page "Positionnement étude"</span>
+                <span>{{ errorPositionnement|length }} Erreur(s) sur la page "Positionnement étude"</span>
                 <div class="displayError" id="displayPosi">
                     <ul>
                         {% for erreur in errorPositionnement %}
@@ -69,7 +69,7 @@
         {% if errorSynoptique %}
             <div class="resultErreur" onclick="displayErrorDiv('displaySyno')">
                 <img width="30" src="{{ asset('assets/images/cross.png') }}">
-                <span>Erreur sur la page "Synoptique bilan µmodules"</span>
+                <span>{{ errorSynoptique|length }} Erreur(s) sur la page "Synoptique bilan µmodules"</span>
                 <div class="displayError" id="displaySyno">
                     <ul>
                         {% for erreur in errorSynoptique %}
@@ -88,7 +88,7 @@
         {% if errorAdductabilite %}
             <div class="resultErreur" onclick="displayErrorDiv('displaySyno')">
                 <img width="30" src="{{ asset('assets/images/cross.png') }}">
-                <span>Erreur sur la page "Adductabilité des sites"</span>
+                <span>{{ errorAdductabilite|length }} Erreur(s) sur la page "Adductabilité des sites"</span>
                 <div class="displayError" id="displaySyno">
                     <ul>
                         {% for erreur in errorAdductabilite %}
