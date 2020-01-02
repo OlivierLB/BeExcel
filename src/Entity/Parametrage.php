@@ -206,6 +206,31 @@ class Parametrage
      */
     private $pgLiLog;
 
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $addColCom;
+
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $addColIte;
+
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $addColHau;
+
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $addColIon;
+
+    /**
+     * @ORM\Column(type="string", length=1, nullable=true)
+     */
+    private $addColNat;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -663,6 +688,66 @@ class Parametrage
     public function setPgLiLog(?int $pgLiLog): self
     {
         $this->pgLiLog = $pgLiLog;
+
+        return $this;
+    }
+
+    public function getAddColCom(): ?string
+    {
+        return $this->addColCom;
+    }
+
+    public function setAddColCom(?string $addColCom): self
+    {
+        $this->addColCom = $addColCom;
+
+        return $this;
+    }
+
+    public function getAddColIte(): ?string
+    {
+        return $this->addColIte;
+    }
+
+    public function setAddColIte(?string $addColIte): self
+    {
+        $this->addColIte = $addColIte;
+
+        return $this;
+    }
+
+    public function getAddColHau(): ?string
+    {
+        return $this->addColHau;
+    }
+
+    public function setAddColHau(?string $addColHau): self
+    {
+        $this->addColHau = $addColHau;
+
+        return $this;
+    }
+
+    public function getAddColIon(): ?string
+    {
+        return $this->addColIon;
+    }
+
+    public function setAddColIon(?string $addColIon): self
+    {
+        $this->addColIon = $addColIon;
+
+        return $this;
+    }
+
+    public function getAddColNat(): ?string
+    {
+        return $this->addColNat;
+    }
+
+    public function setAddColNat(?string $addColNat): self
+    {
+        $this->addColNat = $addColNat;
 
         return $this;
     }

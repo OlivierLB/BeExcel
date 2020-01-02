@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Ajout rêgle adductabilité des sites">
+    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Ajout nombre d'erreur">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/toCheck.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/toCheck.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/be/verif.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/be/verif.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/param.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/param.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Parametrage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Parametrage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ParametrageType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ParametrageType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Json.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Json.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/formParam.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/formParam.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +227,7 @@
       <workItem from="1576685849154" duration="4630000" />
       <workItem from="1576747073385" duration="9355000" />
       <workItem from="1576762599716" duration="6113000" />
-      <workItem from="1576769096223" duration="30244000" />
+      <workItem from="1576769096223" duration="37449000" />
     </task>
     <task id="LOCAL-00001" summary="Creation Automatique PB">
       <created>1575533689378</created>
@@ -352,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577104649056</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Ajout nombre d'erreur">
+      <created>1577104984469</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1577104984469</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +387,8 @@
     <MESSAGE value="Modification regle &quot;pointage etude&quot;" />
     <MESSAGE value="Utilisation Polyline PB" />
     <MESSAGE value="Ajout rêgle adductabilité des sites" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout rêgle adductabilité des sites" />
+    <MESSAGE value="Ajout nombre d'erreur" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout nombre d'erreur" />
   </component>
   <component name="WindowStateProjectService">
     <state x="310" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576678418055">
@@ -392,10 +403,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="585" y="215" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577090660501" />
-    <state x="509" y="50" key="CommitChangelistDialog2" timestamp="1577104648071">
+    <state x="509" y="50" key="CommitChangelistDialog2" timestamp="1577104983644">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="509" y="50" key="CommitChangelistDialog2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577104648071" />
+    <state x="509" y="50" key="CommitChangelistDialog2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577104983644" />
     <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1576847421302">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -416,18 +427,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="364" y="103" key="SettingsEditor/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576831985892" />
-    <state x="447" y="189" key="Vcs.Push.Dialog.v2" timestamp="1576854712660">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1577955199792">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="447" y="189" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576854712660" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577955199792" />
+    <state x="447" y="189" key="Vcs.Push.Dialog.v2" timestamp="1577105659792">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="447" y="189" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577105659792" />
     <state x="660" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576770416863">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="660" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576770416863" />
-    <state x="549" y="65" width="740" height="789" key="find.popup" timestamp="1576770656038">
+    <state x="549" y="65" width="740" height="789" key="find.popup" timestamp="1577955960440">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="549" y="65" width="740" height="789" key="find.popup/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576770656038" />
+    <state x="549" y="65" width="740" height="789" key="find.popup/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577955960440" />
     <state x="512" y="211" key="run.anything.popup" timestamp="1576685361546">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

@@ -115,6 +115,21 @@ class ParametrageType extends AbstractType
             ->add('pseColSit', TextType::class, [
                 'data' => $paramObject->positionnement->pseColSit
             ])
+            ->add('addColCom', TextType::class, [
+                'data' => $paramObject->adductabilite->addColCom
+            ])
+            ->add('addColIte', TextType::class, [
+                'data' => $paramObject->adductabilite->addColIte
+            ])
+            ->add('addColHau', TextType::class, [
+                'data' => $paramObject->adductabilite->addColHau
+            ])
+            ->add('addColIon', TextType::class, [
+                'data' => $paramObject->adductabilite->addColIon
+            ])
+            ->add('addColNat', TextType::class, [
+                'data' => $paramObject->adductabilite->addColNat
+            ])
             ->add('sbColNb', TextType::class, [
                 'data' => $paramObject->synoptique->sbColNb
             ])

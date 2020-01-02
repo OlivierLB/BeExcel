@@ -165,6 +165,32 @@
             </div>
         </div>
 
+        <p class="title">Adductabilité des sites</p>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.addColCom) }}
+                {{ form_label(form.addColCom, 'Colonne commentaires') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.addColNat) }}
+                {{ form_label(form.addColNat, 'Colonne nature des travaux') }}
+            </div>
+            <div class="input-field col s4 m4 l4">
+                {{ form_widget(form.addColHau) }}
+                {{ form_label(form.addColHau, 'Colonne hauteur') }}
+            </div>
+        </div>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.addColIon) }}
+                {{ form_label(form.addColIon, 'Colonne adduction') }}
+            </div>
+            <div class="input-field col s6 m6 l6">
+                {{ form_widget(form.addColIte) }}
+                {{ form_label(form.addColIte, 'Colonne adductabilité') }}
+            </div>
+        </div>
+
         <p class="title">Synoptique bilan µmodules</p>
         <div class="input-field col s12 m12 l12">
             <div class="input-field col s4 m4 l4">

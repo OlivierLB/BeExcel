@@ -19,6 +19,7 @@ class Json {
         $pageGarde = new Object_();
         $pointage = new Object_();
         $positionnement = new Object_();
+        $adductabilite = new Object_();
         $synoptique = new Object_();
 
         $parametrageForm->version = $form->get('version')->getData();
@@ -58,6 +59,12 @@ class Json {
         $positionnement->pseColSit = $form->get('pseColSit')->getData();
         $positionnement->pseColIdGeo = $form->get('pseColIdGeo')->getData();
 
+        $adductabilite->addColCom = $form->get('addColCom')->getData();
+        $adductabilite->addColIte = $form->get('addColIte')->getData();
+        $adductabilite->addColHau = $form->get('addColHau')->getData();
+        $adductabilite->addColIon = $form->get('addColIon')->getData();
+        $adductabilite->addColNat = $form->get('addColNat')->getData();
+
         $synoptique->sbColNb = $form->get('sbColNb')->getData();
         $synoptique->sbLiPmz = $form->get('sbLiPmz')->getData();
         $synoptique->sbLiPa = $form->get('sbLiPa')->getData();
@@ -65,6 +72,7 @@ class Json {
         $parametrageForm->pageDeGarde = $pageGarde;
         $parametrageForm->pointage = $pointage;
         $parametrageForm->positionnement = $positionnement;
+        $parametrageForm->adductabilite = $adductabilite;
         $parametrageForm->synoptique = $synoptique;
         $myJson = json_encode($parametrageForm);
 
