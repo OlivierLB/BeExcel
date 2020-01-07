@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Adductabilité parametrable">
+    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Env = prod">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/toCheck.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/toCheck.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/TraitementsExcel/Adductabilite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/TraitementsExcel/Adductabilite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/be/verif.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/be/verif.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,9 +172,9 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Extia/QGis/Chaton Olivier/Fibees" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -223,7 +227,11 @@
       <workItem from="1576685849154" duration="4630000" />
       <workItem from="1576747073385" duration="9355000" />
       <workItem from="1576762599716" duration="6113000" />
-      <workItem from="1576769096223" duration="38732000" />
+      <workItem from="1576769096223" duration="45378000" />
+      <workItem from="1577980980227" duration="74000" />
+      <workItem from="1578303722356" duration="72000" />
+      <workItem from="1578323620234" duration="351000" />
+      <workItem from="1578384613326" duration="3346000" />
     </task>
     <task id="LOCAL-00001" summary="Creation Automatique PB">
       <created>1575533689378</created>
@@ -365,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577956327011</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Env = prod">
+      <created>1577957736151</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1577957736151</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +407,8 @@
     <MESSAGE value="Ajout rêgle adductabilité des sites" />
     <MESSAGE value="Ajout nombre d'erreur" />
     <MESSAGE value="Adductabilité parametrable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adductabilité parametrable" />
+    <MESSAGE value="Env = prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="Env = prod" />
   </component>
   <component name="WindowStateProjectService">
     <state x="310" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576678418055">
@@ -403,22 +419,25 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="535" y="188" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576769054609" />
-    <state x="585" y="215" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577090660501">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="2505" y="220" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578389544554">
+      <screen x="1920" y="0" width="1707" height="942" />
     </state>
     <state x="585" y="215" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577090660501" />
-    <state x="509" y="50" key="CommitChangelistDialog2" timestamp="1577956326100">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="2505" y="220" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1707.942/0.0.1920.1040@1920.0.1707.942" timestamp="1578389544554" />
+    <state x="573" y="57" key="CommitChangelistDialog2" timestamp="1577957735401">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="509" y="50" key="CommitChangelistDialog2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577956326100" />
+    <state x="573" y="57" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577957735401" />
     <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1576847421302">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="94" y="94" width="1519" height="732" key="DiffContextDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576847421302" />
-    <state x="635" y="217" key="FileChooserDialogImpl" timestamp="1576685365860">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="2555" y="222" key="FileChooserDialogImpl" timestamp="1577975985325">
+      <screen x="1920" y="0" width="1707" height="942" />
     </state>
     <state x="635" y="217" key="FileChooserDialogImpl/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576685365860" />
+    <state x="2555" y="222" key="FileChooserDialogImpl/1920.0.1707.942/0.0.1920.1040@1920.0.1707.942" timestamp="1577975985325" />
     <state x="435" y="197" key="IDE.errors.dialog" timestamp="1576682395989">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -427,18 +446,20 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="588" y="281" key="NewPhpClassDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576856588149" />
-    <state x="364" y="103" key="SettingsEditor" timestamp="1576831985892">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="409" y="116" key="SettingsEditor" timestamp="1577972922378">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="364" y="103" key="SettingsEditor/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1576831985892" />
+    <state x="409" y="116" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1577972922378" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1577955199792">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577955199792" />
-    <state x="447" y="189" key="Vcs.Push.Dialog.v2" timestamp="1577956328754">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="503" y="214" key="Vcs.Push.Dialog.v2" timestamp="1577957769103">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="447" y="189" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577956328754" />
+    <state x="503" y="214" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577957769103" />
     <state x="660" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576770416863">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -447,6 +468,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="549" y="65" width="740" height="789" key="find.popup/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577955960440" />
+    <state x="693" y="308" key="git4idea.merge.GitPullDialog" timestamp="1577957752964">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="693" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577957752964" />
     <state x="512" y="211" key="run.anything.popup" timestamp="1576685361546">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

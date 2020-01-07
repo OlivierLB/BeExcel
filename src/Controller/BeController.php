@@ -107,7 +107,7 @@ class BeController extends AbstractController
             $errorPointage = $traitementPointage->traitementPointage($pointageEtude, $nbAdresse, $paramObject->pointage);
             $errorPositionnement = $traitementPositionnement->traitementPositionnement($positionnementEtude, $nbAdresse, $paramObject->positionnement);
             $errorSynoptique = $traitementSynoptique->traitementSynoptique($synoptique, $paramObject->synoptique);
-            $errorAdductabilite = $traitementAdductabilite->traitementAdductabilite($adductabilite, $nbAdresse, $paramObject);
+            $errorAdductabilite = $traitementAdductabilite->traitementAdductabilite($adductabilite, $nbAdresse, $paramObject->adductabilite);
         }catch (FileException $e){
             return new Response($e->getMessage());
         }
