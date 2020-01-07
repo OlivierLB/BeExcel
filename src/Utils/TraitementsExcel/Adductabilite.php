@@ -39,7 +39,7 @@ class Adductabilite
                 }
 
                 if(!$motDirect || !$motAduction)
-                    array_push($errorAdductabilite, "Erreur ligne $i de la feuille adductabilité des sites");
+                    array_push($errorAdductabilite, "Erreur de commentaire ligne $i de la feuille adductabilité des sites");
             }
         }
 

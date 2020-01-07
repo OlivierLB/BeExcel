@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Env = prod">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="7aa646e7-489d-4724-ad60-b3a7facfa35c" name="Default" comment="Modification regle adductabilite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/uploads/toCheck.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/toCheck.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utils/TraitementsExcel/Adductabilite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/TraitementsExcel/Adductabilite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/be/verif.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/be/verif.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +228,7 @@
       <workItem from="1577980980227" duration="74000" />
       <workItem from="1578303722356" duration="72000" />
       <workItem from="1578323620234" duration="351000" />
-      <workItem from="1578384613326" duration="3346000" />
+      <workItem from="1578384613326" duration="5689000" />
     </task>
     <task id="LOCAL-00001" summary="Creation Automatique PB">
       <created>1575533689378</created>
@@ -380,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577957736151</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Modification regle adductabilite">
+      <created>1578391332323</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1578391332323</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +412,8 @@
     <MESSAGE value="Ajout nombre d'erreur" />
     <MESSAGE value="Adductabilité parametrable" />
     <MESSAGE value="Env = prod" />
-    <option name="LAST_COMMIT_MESSAGE" value="Env = prod" />
+    <MESSAGE value="Modification regle adductabilite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification regle adductabilite" />
   </component>
   <component name="WindowStateProjectService">
     <state x="310" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576678418055">
@@ -424,11 +429,12 @@
     </state>
     <state x="585" y="215" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577090660501" />
     <state x="2505" y="220" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1707.942/0.0.1920.1040@1920.0.1707.942" timestamp="1578389544554" />
-    <state x="573" y="57" key="CommitChangelistDialog2" timestamp="1577957735401">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2429" y="52" key="CommitChangelistDialog2" timestamp="1578391330759">
+      <screen x="1920" y="0" width="1707" height="942" />
     </state>
     <state x="509" y="50" key="CommitChangelistDialog2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577956326100" />
     <state x="573" y="57" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577957735401" />
+    <state x="2429" y="52" key="CommitChangelistDialog2/1920.0.1707.942/0.0.1920.1040@1920.0.1707.942" timestamp="1578391330759" />
     <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1576847421302">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -455,11 +461,12 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577955199792" />
-    <state x="503" y="214" key="Vcs.Push.Dialog.v2" timestamp="1577957769103">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2367" y="194" key="Vcs.Push.Dialog.v2" timestamp="1578391335015">
+      <screen x="1920" y="0" width="1707" height="942" />
     </state>
     <state x="447" y="189" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.0.1920.1040@0.0.1707.920" timestamp="1577956328754" />
     <state x="503" y="214" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577957769103" />
+    <state x="2367" y="194" key="Vcs.Push.Dialog.v2/1920.0.1707.942/0.0.1920.1040@1920.0.1707.942" timestamp="1578391335015" />
     <state x="660" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576770416863">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
