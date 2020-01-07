@@ -17,3 +17,7 @@ document_param:
 autocad_import:
   path: /createSynoptique
   controller: App\Controller\AutocadController::import
+
+regle:
+  path: /regle
+  controller: App\Controller\BeController::regle

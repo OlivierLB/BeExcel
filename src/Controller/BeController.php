@@ -122,6 +122,14 @@ class BeController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/regle", name="regle")
+     */
+    public function regle(Request $request){
+        //Appel la page regle.html avec les tableaux des erreurs
+        return $this->render('be/regle.html.twig', []);
+    }
+
     public function param(Request $request){
         $parametrage = new Parametrage();
         $json = new Json();

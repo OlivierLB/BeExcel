@@ -116,6 +116,14 @@ nav {
     font-family: "Times New Roman";
 }
 
+.titleRegle{
+    color: #ff6908;
+    text-align: left;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: "Times New Roman";
+}
+
 .btnDownload{
     width:500px;
     height:500px;
@@ -147,4 +155,8 @@ nav {
 .btnSave:focus{
     background-color: #ff6908;
     color: #2D2D2D;
+}
+
+dt{
+    font-weight: bold;
 }

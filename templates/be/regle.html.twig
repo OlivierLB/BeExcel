@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BE | règle de vérification Excel{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="resultWarning">
+            <img width="30" src="{{ asset('assets/images/warning.png') }}" >
+            <span>Les règles suivantes provoquent une erreur</span>
+            <img width="30" src="{{ asset('assets/images/warning.png') }}" >
+        </div>
+        <p class="titleRegle">Page de garde</p>
+        <div class="input-field col s12 m12 l12">
+            <div class="input-field col s12 m12 l12">
+                Tableau PA non renseigné
+            </div>
+        </div>
+
+        <p class="titleRegle">Pointage étude</p>
+        <div class="input-field col s12 m12 l12">
+
+            <dl>
+                <dt>Si "Immeuble à supprimer" ou "Immeuble hors PA"</dt>
+                <dd>EL R différent de 0</dd>
+                <dd>EL P différent de 0</dd>
+                <dd>Total différent de 0</dd>
+            </dl>
+        </div>
+
+        <p class="titleRegle">Positionnement étude</p>
+        <div class="input-field col s12 m12 l12">
+            La somme de la colonne "Nbre_Log à grouper par Id PB Geofibre" n'est pas correct
+        </div>
+
+        <p class="titleRegle">Adductabilité des sites</p>
+        <div class="input-field col s12 m12 l12">
+            <dl>
+                <dt>Si nature = "souterrain"</dt>
+                <dd>Hauteur différent de "HH ..."</dd>
+                <dd>Adductabilité différent de "simple"</dd>
+                <dt>Si nature = "façade"</dt>
+                <dd>Hauteur différent de "GH ..."</dd>
+                <dd>Adductabilité différent de "complexe"</dd>
+                <dt>Si nature = "autres"</dt>
+                <dd>Hauteur différent de "PH ..."</dd>
+                <dd>Adductabilité différent de "complexe"</dd>
+                <dt>Si adduction = "AS"</dt>
+                <dd>Commentaire ne contient pas les mots "adduction" et "directe"  </dd>
+            </dl>
+        </div>
+
+        <p class="titleRegle">Synoptique bilan µmodules</p>
+        <div class="input-field col s12 m12 l12">
+            Tableau "Nombre de µModules" non renseigné
+        </div>
+    </div>
+{% endblock %}
+
